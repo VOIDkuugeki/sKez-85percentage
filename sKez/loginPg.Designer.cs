@@ -37,7 +37,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pwdBx = new System.Windows.Forms.TextBox();
-            this.txt_usrname = new System.Windows.Forms.TextBox();
+            this.usrnameBx = new System.Windows.Forms.TextBox();
             this.pwdLbl = new System.Windows.Forms.Label();
             this.usrnameLbl = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -66,7 +66,7 @@
             this.header.Controls.Add(this.confirmPnl);
             this.header.Controls.Add(this.checkBox1);
             this.header.Controls.Add(this.pwdBx);
-            this.header.Controls.Add(this.txt_usrname);
+            this.header.Controls.Add(this.usrnameBx);
             this.header.Controls.Add(this.pwdLbl);
             this.header.Controls.Add(this.usrnameLbl);
             this.header.Location = new System.Drawing.Point(108, 3);
@@ -104,6 +104,7 @@
             this.confirmBtn.Size = new System.Drawing.Size(174, 79);
             this.confirmBtn.TabIndex = 4;
             this.confirmBtn.UseVisualStyleBackColor = false;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             this.confirmBtn.MouseLeave += new System.EventHandler(this.confirmBtn_MouseLeave);
             this.confirmBtn.MouseHover += new System.EventHandler(this.confirmBtn_MouseHover);
             // 
@@ -132,19 +133,19 @@
             this.pwdBx.Location = new System.Drawing.Point(32, 273);
             this.pwdBx.Name = "pwdBx";
             this.pwdBx.Size = new System.Drawing.Size(420, 30);
-            this.pwdBx.TabIndex = 1;
+            this.pwdBx.TabIndex = 2;
             // 
-            // txt_usrname
+            // usrnameBx
             // 
-            this.txt_usrname.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txt_usrname.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txt_usrname.Font = new System.Drawing.Font("Meiryo", 9F);
-            this.txt_usrname.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_usrname.Location = new System.Drawing.Point(32, 194);
-            this.txt_usrname.Name = "txt_usrname";
-            this.txt_usrname.Size = new System.Drawing.Size(420, 30);
-            this.txt_usrname.TabIndex = 1;
-            this.txt_usrname.WordWrap = false;
+            this.usrnameBx.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.usrnameBx.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.usrnameBx.Font = new System.Drawing.Font("Meiryo", 9F);
+            this.usrnameBx.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.usrnameBx.Location = new System.Drawing.Point(32, 194);
+            this.usrnameBx.Name = "usrnameBx";
+            this.usrnameBx.Size = new System.Drawing.Size(420, 30);
+            this.usrnameBx.TabIndex = 1;
+            this.usrnameBx.WordWrap = false;
             // 
             // pwdLbl
             // 
@@ -176,6 +177,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "loginPg";
             this.Size = new System.Drawing.Size(700, 600);
+            this.Load += new System.EventHandler(this.loginPg_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
@@ -190,7 +192,7 @@
         private System.Windows.Forms.Panel header;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox pwdBx;
-        private System.Windows.Forms.TextBox txt_usrname;
+        private System.Windows.Forms.TextBox usrnameBx;
         private System.Windows.Forms.Label pwdLbl;
         private System.Windows.Forms.Label usrnameLbl;
         private System.Windows.Forms.Button confirmBtn;

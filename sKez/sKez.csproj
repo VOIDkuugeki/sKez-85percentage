@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -70,17 +70,40 @@
     <Compile Include="class\workspace\Board.cs" />
     <Compile Include="class\workspace\GroupTask.cs" />
     <Compile Include="class\workspace\ITask.cs" />
-    <Compile Include="class\account\Login.cs" />
     <Compile Include="class\account\Profile.cs" />
     <Compile Include="class\workspace\stickPaper.cs" />
     <Compile Include="class\workspace\Task.cs" />
     <Compile Include="class\account\User.cs" />
     <Compile Include="class\workspace\Workspace.cs" />
+    <Compile Include="GroupBx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupBx.Designer.cs">
+      <DependentUpon>GroupBx.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginPg.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="loginPg.Designer.cs">
       <DependentUpon>loginPg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newGrp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newGrp.Designer.cs">
+      <DependentUpon>newGrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTsk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newTsk.Designer.cs">
+      <DependentUpon>newTsk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="note.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="note.Designer.cs">
+      <DependentUpon>note.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
@@ -101,6 +124,12 @@
     </Compile>
     <Compile Include="signupPg.Designer.cs">
       <DependentUpon>signupPg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="taskBx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="taskBx.Designer.cs">
+      <DependentUpon>taskBx.cs</DependentUpon>
     </Compile>
     <Compile Include="userAccess_1.cs">
       <SubType>Form</SubType>
@@ -129,8 +158,20 @@
     <EmbeddedResource Include="boardScreen.resx">
       <DependentUpon>boardScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupBx.resx">
+      <DependentUpon>GroupBx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginPg.resx">
       <DependentUpon>loginPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newGrp.resx">
+      <DependentUpon>newGrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTsk.resx">
+      <DependentUpon>newTsk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="note.resx">
+      <DependentUpon>note.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\sKez.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -143,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signupPg.resx">
       <DependentUpon>signupPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="taskBx.resx">
+      <DependentUpon>taskBx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userAccess_1.resx">
       <DependentUpon>userAccess_1.cs</DependentUpon>
@@ -189,6 +233,13 @@
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="obj\Debug\sKez.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>

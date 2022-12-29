@@ -23,7 +23,7 @@ namespace sKez
         }
 
         //Password
-        private bool checkStrongPassword(String password)
+        public bool checkStrongPassword(String password)
         {
             //Length
             if(password.Length < 8) return false;

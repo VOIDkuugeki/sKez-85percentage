@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registerInfo));
-            this.pwdBx = new System.Windows.Forms.TextBox();
-            this.txt_mail = new System.Windows.Forms.TextBox();
+            this.lname_txt = new System.Windows.Forms.TextBox();
+            this.fname_txt = new System.Windows.Forms.TextBox();
             this.lstnmLbl = new System.Windows.Forms.Label();
             this.firstnmLbl = new System.Windows.Forms.Label();
             this.confirmBtn = new System.Windows.Forms.Button();
@@ -45,25 +45,25 @@
             this.confirmPnl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pwdBx
+            // lname_txt
             // 
-            this.pwdBx.Font = new System.Drawing.Font("Meiryo", 9F);
-            this.pwdBx.Location = new System.Drawing.Point(32, 273);
-            this.pwdBx.Name = "pwdBx";
-            this.pwdBx.Size = new System.Drawing.Size(420, 30);
-            this.pwdBx.TabIndex = 1;
+            this.lname_txt.Font = new System.Drawing.Font("Meiryo", 9F);
+            this.lname_txt.Location = new System.Drawing.Point(32, 273);
+            this.lname_txt.Name = "lname_txt";
+            this.lname_txt.Size = new System.Drawing.Size(420, 30);
+            this.lname_txt.TabIndex = 2;
             // 
-            // txt_mail
+            // fname_txt
             // 
-            this.txt_mail.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txt_mail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txt_mail.Font = new System.Drawing.Font("Meiryo", 9F);
-            this.txt_mail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_mail.Location = new System.Drawing.Point(32, 194);
-            this.txt_mail.Name = "txt_mail";
-            this.txt_mail.Size = new System.Drawing.Size(420, 30);
-            this.txt_mail.TabIndex = 1;
-            this.txt_mail.WordWrap = false;
+            this.fname_txt.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.fname_txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.fname_txt.Font = new System.Drawing.Font("Meiryo", 9F);
+            this.fname_txt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.fname_txt.Location = new System.Drawing.Point(32, 194);
+            this.fname_txt.Name = "fname_txt";
+            this.fname_txt.Size = new System.Drawing.Size(420, 30);
+            this.fname_txt.TabIndex = 1;
+            this.fname_txt.WordWrap = false;
             // 
             // lstnmLbl
             // 
@@ -138,8 +138,8 @@
             // 
             this.header.Controls.Add(this.skipBtn);
             this.header.Controls.Add(this.confirmPnl);
-            this.header.Controls.Add(this.pwdBx);
-            this.header.Controls.Add(this.txt_mail);
+            this.header.Controls.Add(this.lname_txt);
+            this.header.Controls.Add(this.fname_txt);
             this.header.Controls.Add(this.lstnmLbl);
             this.header.Controls.Add(this.firstnmLbl);
             this.header.Location = new System.Drawing.Point(108, 3);
@@ -154,7 +154,7 @@
             this.skipBtn.Location = new System.Drawing.Point(91, 376);
             this.skipBtn.Name = "skipBtn";
             this.skipBtn.Size = new System.Drawing.Size(112, 85);
-            this.skipBtn.TabIndex = 6;
+            this.skipBtn.TabIndex = 3;
             this.skipBtn.Text = "Later";
             this.skipBtn.UseVisualStyleBackColor = true;
             this.skipBtn.Click += new System.EventHandler(this.skipBtn_Click);
@@ -188,8 +188,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox pwdBx;
-        private System.Windows.Forms.TextBox txt_mail;
+        private System.Windows.Forms.TextBox lname_txt;
+        private System.Windows.Forms.TextBox fname_txt;
         private System.Windows.Forms.Label lstnmLbl;
         private System.Windows.Forms.Label firstnmLbl;
         private System.Windows.Forms.Button confirmBtn;

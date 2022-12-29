@@ -67,10 +67,10 @@ namespace sKez
             this.cancelBtn = new System.Windows.Forms.Button();
             this.newBtn = new System.Windows.Forms.Button();
             this.calendarPage = new System.Windows.Forms.TabPage();
-            this.dayvwBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.calendarIcon = new System.Windows.Forms.ImageList(this.components);
             this.mthvwBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dayvwBtn = new System.Windows.Forms.Button();
             this.narBar.SuspendLayout();
             this.quickPanel.SuspendLayout();
             this.userPanel.SuspendLayout();
@@ -165,6 +165,7 @@ namespace sKez
             // 
             // calendarNvgBtn
             // 
+            this.calendarNvgBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calendarNvgBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarNvgBtn.FlatAppearance.BorderSize = 0;
             this.calendarNvgBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -601,20 +602,19 @@ namespace sKez
             this.calendarPage.TabIndex = 1;
             this.calendarPage.Text = "calendarPage";
             // 
-            // dayvwBtn
+            // button2
             // 
-            this.dayvwBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dayvwBtn.FlatAppearance.BorderSize = 0;
-            this.dayvwBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.dayvwBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.dayvwBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dayvwBtn.ImageKey = "Day View.png";
-            this.dayvwBtn.ImageList = this.calendarIcon;
-            this.dayvwBtn.Location = new System.Drawing.Point(732, 19);
-            this.dayvwBtn.Name = "dayvwBtn";
-            this.dayvwBtn.Size = new System.Drawing.Size(36, 32);
-            this.dayvwBtn.TabIndex = 0;
-            this.dayvwBtn.UseVisualStyleBackColor = true;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ImageKey = "Month View.png";
+            this.button2.ImageList = this.calendarIcon;
+            this.button2.Location = new System.Drawing.Point(816, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(36, 32);
+            this.button2.TabIndex = 0;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // calendarIcon
             // 
@@ -639,19 +639,20 @@ namespace sKez
             this.mthvwBtn.TabIndex = 0;
             this.mthvwBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // dayvwBtn
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ImageKey = "Month View.png";
-            this.button2.ImageList = this.calendarIcon;
-            this.button2.Location = new System.Drawing.Point(816, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 32);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = true;
+            this.dayvwBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dayvwBtn.FlatAppearance.BorderSize = 0;
+            this.dayvwBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.dayvwBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.dayvwBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dayvwBtn.ImageKey = "Day View.png";
+            this.dayvwBtn.ImageList = this.calendarIcon;
+            this.dayvwBtn.Location = new System.Drawing.Point(732, 19);
+            this.dayvwBtn.Name = "dayvwBtn";
+            this.dayvwBtn.Size = new System.Drawing.Size(36, 32);
+            this.dayvwBtn.TabIndex = 0;
+            this.dayvwBtn.UseVisualStyleBackColor = true;
             // 
             // wpScreen
             // 

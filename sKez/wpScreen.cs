@@ -148,13 +148,13 @@ namespace sKez
         private void loginBtn_Click(object sender, EventArgs e)
         {
             Form childForm = new userAccess_1();
-            childForm.Show();
+            childForm.ShowDialog();
         }
 
         private void signupBtn_Click(object sender, EventArgs e)
         {
             Form childForm = new userAccess_2();
-            childForm.Show();
+            childForm.ShowDialog();
         }
 
         private void workspaceBtn_Click(object sender, EventArgs e)

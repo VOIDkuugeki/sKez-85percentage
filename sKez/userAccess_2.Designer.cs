@@ -184,6 +184,7 @@
             this.Controls.Add(this.mainContainter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "userAccess_2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "userAccess_2";
             this.pagePnl.ResumeLayout(false);
             this.signupPnl.ResumeLayout(false);

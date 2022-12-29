@@ -37,7 +37,7 @@ namespace sKez
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void openUControls(UserControl u)
