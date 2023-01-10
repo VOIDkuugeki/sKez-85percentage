@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registerInfo));
             this.lname_txt = new System.Windows.Forms.TextBox();
             this.fname_txt = new System.Windows.Forms.TextBox();
             this.lstnmLbl = new System.Windows.Forms.Label();
             this.firstnmLbl = new System.Windows.Forms.Label();
             this.confirmBtn = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.header = new System.Windows.Forms.Panel();
             this.skipBtn = new System.Windows.Forms.Button();
@@ -47,6 +44,7 @@
             // 
             // lname_txt
             // 
+            this.lname_txt.AccessibleName = "lname";
             this.lname_txt.Font = new System.Drawing.Font("Meiryo", 9F);
             this.lname_txt.Location = new System.Drawing.Point(32, 273);
             this.lname_txt.Name = "lname_txt";
@@ -55,8 +53,8 @@
             // 
             // fname_txt
             // 
-            this.fname_txt.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.fname_txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.fname_txt.AccessibleName = "fname";
+            this.fname_txt.BackColor = System.Drawing.SystemColors.Window;
             this.fname_txt.Font = new System.Drawing.Font("Meiryo", 9F);
             this.fname_txt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.fname_txt.Location = new System.Drawing.Point(32, 194);
@@ -95,28 +93,22 @@
             this.confirmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.confirmBtn.FlatAppearance.BorderSize = 0;
-            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmBtn.Font = new System.Drawing.Font("Meiryo UI", 15F);
+            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.confirmBtn.Font = new System.Drawing.Font("Meiryo UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.confirmBtn.ImageIndex = 0;
-            this.confirmBtn.ImageList = this.imageList1;
             this.confirmBtn.Location = new System.Drawing.Point(3, 3);
             this.confirmBtn.Margin = new System.Windows.Forms.Padding(0);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Padding = new System.Windows.Forms.Padding(5);
             this.confirmBtn.Size = new System.Drawing.Size(174, 79);
             this.confirmBtn.TabIndex = 4;
+            this.confirmBtn.Tag = "";
+            this.confirmBtn.Text = "Done";
             this.confirmBtn.UseVisualStyleBackColor = false;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             this.confirmBtn.MouseLeave += new System.EventHandler(this.confirmBtn_MouseLeave);
             this.confirmBtn.MouseHover += new System.EventHandler(this.confirmBtn_MouseHover);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "arrow-icon.png");
-            this.imageList1.Images.SetKeyName(1, "gold_arrow-icon.png");
             // 
             // tableLayoutPanel1
             // 
@@ -193,7 +185,6 @@
         private System.Windows.Forms.Label lstnmLbl;
         private System.Windows.Forms.Label firstnmLbl;
         private System.Windows.Forms.Button confirmBtn;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel header;
         private System.Windows.Forms.Button skipBtn;

@@ -5,16 +5,17 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace sKez
 {
     public partial class signupPg : UserControl
     {
         String mail;
-        int id;
         public signupPg(String mail)
         {
             InitializeComponent();
@@ -24,13 +25,13 @@ namespace sKez
         private void confirmBtn_MouseHover(object sender, EventArgs e)
         {
             confirmPnl.BackColor = Color.Gold;
-            confirmBtn.ImageIndex = 1;
+            confirmBtn.ForeColor = Color.Gold;
         }
 
         private void confirmBtn_MouseLeave(object sender, EventArgs e)
         {
             confirmPnl.BackColor = Color.Transparent;
-            confirmBtn.ImageIndex = 0;
+            confirmBtn.ForeColor = Color.WhiteSmoke;
         }
 
         private void openUControls(UserControl u)
@@ -49,31 +50,32 @@ namespace sKez
             else
             {
                 SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
-                cnt.Open();
+                try
+                {
+                    String query = "insert into Account(Username,password)" + //Insert username & password
+                        "values (@uname,@pwd);" +
+                        "update User_info " +
+                        "set Mail = @mail " + //Insert mail
+                        "where User_info.Id in " +
+                        "(select * from(select Id from Account where Username = @uname) as id)";
+                    SqlCommand comm = new SqlCommand(query, cnt);
+                    comm.Parameters.AddWithValue("@uname", this.txt_usrname.Text);
+                    comm.Parameters.AddWithValue("@pwd", this.pwdBx.Text);
+                    comm.Parameters.AddWithValue("@mail", this.mail);
 
-                //Insert username & password
-                String query = "insert into Account(Username,password)" +
-                               "values (@uname,@pwd)";
-                SqlCommand comm = new SqlCommand(query, cnt);
-                comm.Parameters.AddWithValue("@uname", this.txt_usrname.Text);
-                comm.Parameters.AddWithValue("@pwd", this.pwdBx.Text);
+                    cnt.Open();
+                    comm.ExecuteNonQuery();
+                    comm.Dispose();
+                }
+                catch
+                {
 
-                //Get Id
-                String query2 = "select Id from Account where Username = @uname";
-                SqlCommand comm2 = new SqlCommand(query2, cnt);
-                comm2.Parameters.AddWithValue("@uname", this.txt_usrname.Text);
-                var res = comm.ExecuteScalar();
-                this.id = Convert.ToInt32(res);
-
-                //Insert mail
-                String query3 = "update User_info"+
-                               "set Mail = @mail"+
-                               "where Id = @id";
-                SqlCommand comm3 = new SqlCommand(query3,cnt);
-                comm3.Parameters.AddWithValue("@mail", this.mail);
-                comm3.Parameters.Add("@id", SqlDbType.Int);
-                comm3.Parameters["@id"].Value = this.id;
-                openUControls(new registerInfo(id));
+                }
+                finally
+                {
+                    cnt.Close();
+                }
+                openUControls(new registerInfo(mail));
             }
         }
         
@@ -92,17 +94,17 @@ namespace sKez
         {
             //Check available username
             SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
+            cnt.Open();
             String query = "select Id from Account where Username = @uname";
             SqlCommand comm = new SqlCommand(query, cnt);
             comm.Parameters.AddWithValue("@uname", this.txt_usrname.Text);
-            cnt.Open();
 
             var res = comm.ExecuteScalar();
             if (res != null)
             {
                 unavailableUsername.Visible = true;
             }
-
+            else unavailableUsername.Visible = false;
             cnt.Close();
         }
 
@@ -157,6 +159,12 @@ namespace sKez
         private void txt_usrname_Click(object sender, EventArgs e)
         {
             matchPwd.Visible = false;
+        }
+
+        private void txt_pwdcfm_Leave(object sender, EventArgs e)
+        {
+            if (!txt_pwdcfm.Text.Equals(pwdBx.Text)) matchPwd.Visible = true;
+            else matchPwd.Visible = false;
         }
     }
 }

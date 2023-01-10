@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class userAccess_1 : Form
+    public partial class userAccess : Form
     {
-        public userAccess_1()
+        public userAccess()
         {
             InitializeComponent();
         }
@@ -39,7 +39,7 @@ namespace sKez
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Application.Exit();
         }
 
         private void openUControls(UserControl u)

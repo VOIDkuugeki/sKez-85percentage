@@ -67,6 +67,12 @@
     <Compile Include="boardScreen.Designer.cs">
       <DependentUpon>boardScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="calendarTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="calendarTab.Designer.cs">
+      <DependentUpon>calendarTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="class\workspace\Board.cs" />
     <Compile Include="class\workspace\GroupTask.cs" />
     <Compile Include="class\workspace\ITask.cs" />
@@ -80,6 +86,24 @@
     </Compile>
     <Compile Include="GroupBx.Designer.cs">
       <DependentUpon>GroupBx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainPg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainPg.Designer.cs">
+      <DependentUpon>mainPg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userPnl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userPnl.Designer.cs">
+      <DependentUpon>userPnl.cs</DependentUpon>
     </Compile>
     <Compile Include="loginPg.cs">
       <SubType>UserControl</SubType>
@@ -131,17 +155,11 @@
     <Compile Include="taskBx.Designer.cs">
       <DependentUpon>taskBx.cs</DependentUpon>
     </Compile>
-    <Compile Include="userAccess_1.cs">
+    <Compile Include="userAccess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="userAccess_1.Designer.cs">
-      <DependentUpon>userAccess_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="userAccess_2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="userAccess_2.Designer.cs">
-      <DependentUpon>userAccess_2.cs</DependentUpon>
+    <Compile Include="userAccess.Designer.cs">
+      <DependentUpon>userAccess.cs</DependentUpon>
     </Compile>
     <Compile Include="verifyPg.cs">
       <SubType>UserControl</SubType>
@@ -149,17 +167,35 @@
     <Compile Include="verifyPg.Designer.cs">
       <DependentUpon>verifyPg.cs</DependentUpon>
     </Compile>
-    <Compile Include="wpScreen.cs">
+    <Compile Include="mainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="wpScreen.Designer.cs">
-      <DependentUpon>wpScreen.cs</DependentUpon>
+    <Compile Include="mainScreen.Designer.cs">
+      <DependentUpon>mainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="workSpaceTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="workSpaceTab.Designer.cs">
+      <DependentUpon>workSpaceTab.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="boardScreen.resx">
       <DependentUpon>boardScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="calendarTab.resx">
+      <DependentUpon>calendarTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupBx.resx">
       <DependentUpon>GroupBx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainPg.resx">
+      <DependentUpon>mainPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile.resx">
+      <DependentUpon>profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userPnl.resx">
+      <DependentUpon>userPnl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginPg.resx">
       <DependentUpon>loginPg.cs</DependentUpon>
@@ -188,17 +224,17 @@
     <EmbeddedResource Include="taskBx.resx">
       <DependentUpon>taskBx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="userAccess_1.resx">
-      <DependentUpon>userAccess_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="userAccess_2.resx">
-      <DependentUpon>userAccess_2.cs</DependentUpon>
+    <EmbeddedResource Include="userAccess.resx">
+      <DependentUpon>userAccess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="verifyPg.resx">
       <DependentUpon>verifyPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="wpScreen.resx">
-      <DependentUpon>wpScreen.cs</DependentUpon>
+    <EmbeddedResource Include="mainScreen.resx">
+      <DependentUpon>mainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="workSpaceTab.resx">
+      <DependentUpon>workSpaceTab.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

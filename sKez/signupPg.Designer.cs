@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signupPg));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.header = new System.Windows.Forms.Panel();
             this.strongPwd = new System.Windows.Forms.Label();
@@ -39,7 +37,6 @@
             this.pwd_cfmLbl = new System.Windows.Forms.Label();
             this.confirmPnl = new System.Windows.Forms.Panel();
             this.confirmBtn = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pwdBx = new System.Windows.Forms.TextBox();
             this.txt_usrname = new System.Windows.Forms.TextBox();
             this.pwdLbl = new System.Windows.Forms.Label();
@@ -138,6 +135,7 @@
             this.txt_pwdcfm.UseSystemPasswordChar = true;
             this.txt_pwdcfm.WordWrap = false;
             this.txt_pwdcfm.Click += new System.EventHandler(this.txt_pwdcfm_Click);
+            this.txt_pwdcfm.Leave += new System.EventHandler(this.txt_pwdcfm_Leave);
             // 
             // pwd_cfmLbl
             // 
@@ -168,27 +166,20 @@
             this.confirmBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.confirmBtn.FlatAppearance.BorderSize = 0;
             this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmBtn.Font = new System.Drawing.Font("Meiryo UI", 15F);
-            this.confirmBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.confirmBtn.Font = new System.Drawing.Font("Meiryo UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.confirmBtn.ImageIndex = 0;
-            this.confirmBtn.ImageList = this.imageList1;
             this.confirmBtn.Location = new System.Drawing.Point(3, 3);
             this.confirmBtn.Margin = new System.Windows.Forms.Padding(0);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Padding = new System.Windows.Forms.Padding(5);
             this.confirmBtn.Size = new System.Drawing.Size(174, 79);
             this.confirmBtn.TabIndex = 4;
+            this.confirmBtn.Text = "Confirm";
             this.confirmBtn.UseVisualStyleBackColor = false;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             this.confirmBtn.MouseLeave += new System.EventHandler(this.confirmBtn_MouseLeave);
             this.confirmBtn.MouseHover += new System.EventHandler(this.confirmBtn_MouseHover);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "arrow-icon.png");
-            this.imageList1.Images.SetKeyName(1, "gold_arrow-icon.png");
             // 
             // pwdBx
             // 
@@ -285,7 +276,6 @@
         private System.Windows.Forms.Label pwd_cfmLbl;
         private System.Windows.Forms.Panel confirmPnl;
         private System.Windows.Forms.Button confirmBtn;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TextBox pwdBx;
         private System.Windows.Forms.TextBox txt_usrname;
         private System.Windows.Forms.Label pwdLbl;

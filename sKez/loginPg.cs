@@ -49,7 +49,14 @@ namespace sKez
             comm.ExecuteNonQuery();
             if(dt.Rows.Count > 0)
             {
+                DataRow row = dt.Rows[0];
+                User.id = (int) row["id"];
+                User.username = row["Username"].ToString();
+                User.password = row["Password"].ToString();
+                
                 this.ParentForm.Hide();
+                mainScreen mscr = new mainScreen();
+                mscr.Show();    
             }
             else
             {

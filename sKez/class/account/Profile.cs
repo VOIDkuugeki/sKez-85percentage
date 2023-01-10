@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace sKez
 {
-    public class Profile
+    class Profile
     {
         private String firstname { get; set; }
         private String lastname { get; set; }

@@ -13,44 +13,54 @@ namespace sKez
 {
     public partial class registerInfo : UserControl
     {
-        int id;
-        public registerInfo(int id)
+        String mail;
+        public registerInfo(String mail)
         {
             InitializeComponent();
-            this.id = id;
+            this.mail = mail;
         }
 
         private void confirmBtn_MouseHover(object sender, EventArgs e)
         {
+            confirmBtn.ForeColor = Color.Gold;
             confirmPnl.BackColor = Color.Gold;
-            confirmBtn.ImageIndex = 1;
         }
 
         private void confirmBtn_MouseLeave(object sender, EventArgs e)
         {
             confirmPnl.BackColor = Color.Transparent;
-            confirmBtn.ImageIndex = 0;
+            confirmBtn.ForeColor = Color.WhiteSmoke;
         }
         private void confirmBtn_Click(object sender, EventArgs e)
         {
             SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
-            cnt.Open();
-            String query = "update [dbo].[User_info]" +
-                           "set FirstName = @fname, LastName = @lname" +
-                           "where Id = @id";
-            SqlCommand comm = new SqlCommand(query, cnt);
-            comm.Parameters.AddWithValue("@fname", this.fname_txt.Text);
-            comm.Parameters.AddWithValue("@lname", this.lname_txt.Text);
-            comm.Parameters.Add("@id", SqlDbType.Int);
-            comm.Parameters["@id"].Value = this.id;
-            comm.CommandTimeout = 3000;
-            cnt.Close();
-            this.ParentForm.Hide();
+            try
+            {
+                cnt.Open();
+                String query = "update User_info " +
+                    "set FirstName = @fname, LastName = @lname " +
+                    "where Mail = @mail";
+                SqlCommand comm = new SqlCommand(query, cnt);
+                comm.Parameters.AddWithValue("@fname", fname_txt.Text);
+                comm.Parameters.AddWithValue("@lname", lname_txt.Text);
+                comm.Parameters.AddWithValue("@mail", this.mail);
+                comm.ExecuteNonQuery();
+                comm.Dispose();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cnt.Close();
+            }
+            Application.Restart();
         }
 
         private void skipBtn_Click(object sender, EventArgs e)
         {
-            this.ParentForm.Hide();
+            Application.Restart(); 
         }
     }
 }

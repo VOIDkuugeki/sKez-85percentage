@@ -30,13 +30,13 @@ namespace sKez
         private void confirmBtn_MouseHover(object sender, EventArgs e)
         {
             confirmPnl.BackColor = Color.Gold;
-            confirmBtn.ImageIndex = 1;
+            confirmBtn.ForeColor = Color.Gold;
         }
 
         private void confirmBtn_MouseLeave(object sender, EventArgs e)
         {
             confirmPnl.BackColor = Color.Transparent;
-            confirmBtn.ImageIndex = 0;
+            confirmBtn.ForeColor = Color.WhiteSmoke;
         }
 
         private void openUControls(UserControl u)
@@ -97,12 +97,12 @@ namespace sKez
             {
                 incorrectMail.Visible = true;
             }
-            else incorrectMail.Visible = false;
+            incorrectMail.Visible = false;
         }
 
         private async void sendcodeBtn_Click(object sender, EventArgs e)
         {
-            if(i == 0|i == null)
+            if(i == 0)
             {
                 //Generate code
                 code = random.Next(10000, 100000);
