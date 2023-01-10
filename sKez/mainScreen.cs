@@ -19,7 +19,9 @@ namespace sKez
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            this.Hide();
+            userAccess access = new userAccess();
+            access.Show();
         }
 
         /// Draggable panel:
@@ -37,6 +39,11 @@ namespace sKez
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
+        }
+
+        private void mainScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class profile : UserControl
+    public partial class profilePg : UserControl
     {
-        public profile()
+        public profilePg()
         {
             InitializeComponent();
         }

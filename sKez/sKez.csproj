@@ -93,11 +93,11 @@
     <Compile Include="mainPg.Designer.cs">
       <DependentUpon>mainPg.cs</DependentUpon>
     </Compile>
-    <Compile Include="profile.cs">
+    <Compile Include="profilePg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="profile.Designer.cs">
-      <DependentUpon>profile.cs</DependentUpon>
+    <Compile Include="profilePg.Designer.cs">
+      <DependentUpon>profilePg.cs</DependentUpon>
     </Compile>
     <Compile Include="userPnl.cs">
       <SubType>UserControl</SubType>
@@ -191,8 +191,8 @@
     <EmbeddedResource Include="mainPg.resx">
       <DependentUpon>mainPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="profile.resx">
-      <DependentUpon>profile.cs</DependentUpon>
+    <EmbeddedResource Include="profilePg.resx">
+      <DependentUpon>profilePg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userPnl.resx">
       <DependentUpon>userPnl.cs</DependentUpon>

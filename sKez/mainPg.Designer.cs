@@ -35,7 +35,7 @@
             this.workspaceBtn = new System.Windows.Forms.Button();
             this.editIcon = new System.Windows.Forms.ImageList(this.components);
             this.tab = new System.Windows.Forms.Panel();
-            this.workSpaceTab1 = new sKez.workSpaceTab();
+            this.content = new System.Windows.Forms.Panel();
             this.pagesTable.SuspendLayout();
             this.tab.SuspendLayout();
             this.SuspendLayout();
@@ -105,21 +105,20 @@
             // 
             // tab
             // 
-            this.tab.Controls.Add(this.workSpaceTab1);
+            this.tab.Controls.Add(this.content);
             this.tab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab.Location = new System.Drawing.Point(0, 96);
             this.tab.Name = "tab";
             this.tab.Size = new System.Drawing.Size(864, 642);
             this.tab.TabIndex = 7;
             // 
-            // workSpaceTab1
+            // content
             // 
-            this.workSpaceTab1.BackColor = System.Drawing.Color.Lavender;
-            this.workSpaceTab1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.workSpaceTab1.Location = new System.Drawing.Point(0, 0);
-            this.workSpaceTab1.Name = "workSpaceTab1";
-            this.workSpaceTab1.Size = new System.Drawing.Size(864, 642);
-            this.workSpaceTab1.TabIndex = 0;
+            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content.Location = new System.Drawing.Point(0, 0);
+            this.content.Name = "content";
+            this.content.Size = new System.Drawing.Size(864, 642);
+            this.content.TabIndex = 1;
             // 
             // mainPg
             // 
@@ -142,6 +141,6 @@
         private System.Windows.Forms.Button workspaceBtn;
         private System.Windows.Forms.ImageList editIcon;
         private System.Windows.Forms.Panel tab;
-        private workSpaceTab workSpaceTab1;
+        private System.Windows.Forms.Panel content;
     }
 }

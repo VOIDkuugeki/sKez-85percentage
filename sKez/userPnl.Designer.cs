@@ -104,7 +104,7 @@
             this.nameTag.Name = "nameTag";
             this.nameTag.Size = new System.Drawing.Size(93, 64);
             this.nameTag.TabIndex = 7;
-            this.nameTag.Text = User.username;
+            this.nameTag.Text = User.Uname;
             this.nameTag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // userPnl

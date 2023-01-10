@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userAccess));
             this.mainContainter = new System.Windows.Forms.Panel();
+            this.loginPg2 = new sKez.loginPg();
             this.pagePnl = new System.Windows.Forms.TableLayoutPanel();
             this.signupPnl = new System.Windows.Forms.Panel();
             this.signupBtn = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.loginBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.loginPg2 = new sKez.loginPg();
             this.mainContainter.SuspendLayout();
             this.pagePnl.SuspendLayout();
             this.signupPnl.SuspendLayout();
@@ -54,6 +54,14 @@
             this.mainContainter.Name = "mainContainter";
             this.mainContainter.Size = new System.Drawing.Size(700, 600);
             this.mainContainter.TabIndex = 0;
+            // 
+            // loginPg2
+            // 
+            this.loginPg2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginPg2.Location = new System.Drawing.Point(0, 0);
+            this.loginPg2.Name = "loginPg2";
+            this.loginPg2.Size = new System.Drawing.Size(700, 600);
+            this.loginPg2.TabIndex = 0;
             // 
             // pagePnl
             // 
@@ -141,6 +149,7 @@
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.White;
+            this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -163,15 +172,7 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "close-icon.png");
             // 
-            // loginPg2
-            // 
-            this.loginPg2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginPg2.Location = new System.Drawing.Point(0, 0);
-            this.loginPg2.Name = "loginPg2";
-            this.loginPg2.Size = new System.Drawing.Size(700, 600);
-            this.loginPg2.TabIndex = 0;
-            // 
-            // userAccess_1
+            // userAccess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,11 +182,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "userAccess_1";
+            this.Name = "userAccess";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "userAccess";
             this.Activated += new System.EventHandler(this.userAccess_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.userAccess_FormClosed);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.userAccess_MouseDown);
             this.mainContainter.ResumeLayout(false);
             this.pagePnl.ResumeLayout(false);

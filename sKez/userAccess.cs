@@ -72,5 +72,10 @@ namespace sKez
                     break;
             }
         }
+
+        private void userAccess_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

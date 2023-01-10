@@ -50,10 +50,12 @@ namespace sKez
             if(dt.Rows.Count > 0)
             {
                 DataRow row = dt.Rows[0];
-                User.id = (int) row["id"];
-                User.username = row["Username"].ToString();
-                User.password = row["Password"].ToString();
-                
+                User.Id = (int) row["id"];
+                User.Uname = row["Username"].ToString();
+                User.Pwd = row["Password"].ToString();
+                User.setMail();
+                Profile.setProfile();
+
                 this.ParentForm.Hide();
                 mainScreen mscr = new mainScreen();
                 mscr.Show();    

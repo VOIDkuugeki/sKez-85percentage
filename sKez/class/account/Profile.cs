@@ -1,8 +1,11 @@
 ﻿using sKez.Properties;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,54 +14,52 @@ namespace sKez
 {
     class Profile
     {
-        private String firstname { get; set; }
-        private String lastname { get; set; }
-        private Image img { get; set; }
+        private static String firstname;
+        private static String lastname;
+        private static Image img;
 
-        //Create
-        public Profile() 
+        static Profile()
         {
-            this.img = Resources.user;
+
         }
-        public Profile(String firstname, String lastname)
+        public static void setFname(String value)
         {
-            this.firstname = firstname;
-            this.lastname = lastname;
+            firstname = value;
         }
 
-        //Edit
-        public void setFirstName(String firstName)
+        public static void setLname(String value)
         {
-            this.firstname = firstName;
+            lastname = value;
         }
-        public void setLastName(String lastName)
+        public static Image Img
         {
-            this.lastname = lastName;
+            get { return img; }
+            set { img = value; }
         }
-        public String getFirstname()
+        public static void setProfile()
         {
-            return this.firstname;
-        }
-        public String getLastname()
-        {
-            return this.lastname;
-        }
-        public void setName(String first, String last)
-        {
-            setFirstName(first); setLastName(last);
-        }
-        public String getName()
-        {
-            return getFirstname() + " " + getLastname();
+            SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
+            String query = "select * from User_info where Id = @id";
+            cnt.Open();
+            SqlCommand comm = new SqlCommand(query, cnt);
+            comm.Parameters.Add("@id", SqlDbType.Int).Value = User.Id;
+            SqlDataAdapter sda = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            comm.ExecuteNonQuery();
+            DataRow row = dt.Rows[0];
+            setFname(row["FirstName"].ToString());
+            setLname(row["LastName"].ToString());
+            cnt.Close();
         }
 
-        public void setImg(Image img)
+        public static String getFname()
         {
-            this.img = img;
+            return firstname;
         }
-        public Image getImg()
+        public static String getLname()
         {
-            return this.img;
+            return lastname;
         }
     }
 }

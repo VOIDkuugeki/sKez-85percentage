@@ -40,15 +40,14 @@ namespace sKez
             this.narbarIcon = new System.Windows.Forms.ImageList(this.components);
             this.calendarNvgBtn = new System.Windows.Forms.Button();
             this.settingNvgBtn = new System.Windows.Forms.Button();
+            this.userPnl1 = new sKez.userPnl();
             this.header = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.controlIcon = new System.Windows.Forms.ImageList(this.components);
             this.closeBtn = new System.Windows.Forms.Button();
             this.editIcon = new System.Windows.Forms.ImageList(this.components);
-            this.calendarIcon = new System.Windows.Forms.ImageList(this.components);
             this.content = new System.Windows.Forms.Panel();
-            this.userPnl1 = new sKez.userPnl();
             this.mainPg1 = new sKez.mainPg();
             this.narBar.SuspendLayout();
             this.quickPanel.SuspendLayout();
@@ -181,6 +180,16 @@ namespace sKez
             this.settingNvgBtn.UseCompatibleTextRendering = true;
             this.settingNvgBtn.UseVisualStyleBackColor = false;
             // 
+            // userPnl1
+            // 
+            this.userPnl1.AccessibleName = "userPnl";
+            this.userPnl1.BackColor = System.Drawing.Color.BlueViolet;
+            this.userPnl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userPnl1.Location = new System.Drawing.Point(0, 0);
+            this.userPnl1.Name = "userPnl1";
+            this.userPnl1.Size = new System.Drawing.Size(160, 126);
+            this.userPnl1.TabIndex = 0;
+            // 
             // header
             // 
             this.header.Controls.Add(this.panel2);
@@ -246,14 +255,6 @@ namespace sKez
             this.editIcon.Images.SetKeyName(1, "add-icon.png");
             this.editIcon.Images.SetKeyName(2, "delete-icon.png");
             // 
-            // calendarIcon
-            // 
-            this.calendarIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("calendarIcon.ImageStream")));
-            this.calendarIcon.TransparentColor = System.Drawing.Color.Transparent;
-            this.calendarIcon.Images.SetKeyName(0, "Day View.png");
-            this.calendarIcon.Images.SetKeyName(1, "Week View.png");
-            this.calendarIcon.Images.SetKeyName(2, "Month View.png");
-            // 
             // content
             // 
             this.content.Controls.Add(this.mainPg1);
@@ -262,16 +263,6 @@ namespace sKez
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(864, 738);
             this.content.TabIndex = 3;
-            // 
-            // userPnl1
-            // 
-            this.userPnl1.AccessibleName = "userPnl";
-            this.userPnl1.BackColor = System.Drawing.Color.BlueViolet;
-            this.userPnl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.userPnl1.Location = new System.Drawing.Point(0, 0);
-            this.userPnl1.Name = "userPnl1";
-            this.userPnl1.Size = new System.Drawing.Size(160, 126);
-            this.userPnl1.TabIndex = 0;
             // 
             // mainPg1
             // 
@@ -298,6 +289,7 @@ namespace sKez
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "mainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainScreen_FormClosed);
             this.narBar.ResumeLayout(false);
             this.quickPanel.ResumeLayout(false);
             this.header.ResumeLayout(false);
@@ -322,7 +314,6 @@ namespace sKez
         private Button closeBtn;
         private ImageList editIcon;
         private TableLayoutPanel quickPanel;
-        private ImageList calendarIcon;
         private userPnl userPnl1;
         private Panel content;
         private mainPg mainPg1;
