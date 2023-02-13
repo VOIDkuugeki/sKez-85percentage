@@ -8,7 +8,7 @@ namespace sKez
 {
     public class Workspace
     {
-        private List<Board> list;
+        private List<UCBoard> list;
 
         public Workspace()
         {
@@ -16,15 +16,15 @@ namespace sKez
         }
 
         //List
-        public void addBoard(Board board)
+        public void addBoard(UCBoard board)
         {
             this.list.Add(board);
         }
-        public void removeBoard(Board board)
+        public void removeBoard(UCBoard board)
         {
             this.list.Remove(board);
         }
-        public List<Board> getList()
+        public List<UCBoard> getList()
         {
             return this.list;
         }

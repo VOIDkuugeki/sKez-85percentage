@@ -18,24 +18,6 @@ namespace sKez
         private static String lastname;
         private static Image img;
 
-        static Profile()
-        {
-
-        }
-        public static void setFname(String value)
-        {
-            firstname = value;
-        }
-
-        public static void setLname(String value)
-        {
-            lastname = value;
-        }
-        public static Image Img
-        {
-            get { return img; }
-            set { img = value; }
-        }
         public static void setProfile()
         {
             SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
@@ -51,6 +33,21 @@ namespace sKez
             setFname(row["FirstName"].ToString());
             setLname(row["LastName"].ToString());
             cnt.Close();
+        }
+
+        private static void setFname(String value)
+        {
+            firstname = value;
+        }
+
+        private static void setLname(String value)
+        {
+            lastname = value;
+        }
+        public static Image Img
+        {
+            get { return img; }
+            set { img = value; }
         }
 
         public static String getFname()

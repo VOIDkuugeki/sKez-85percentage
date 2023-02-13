@@ -18,9 +18,21 @@ namespace sKez
             this.name = "new board";
         }
 
+        public Board(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+
         public Board(String input)
         {
             this.name = input;
+        }
+
+        //Id
+        public int getId()
+        {
+            return this.id;
         }
 
         //Name
