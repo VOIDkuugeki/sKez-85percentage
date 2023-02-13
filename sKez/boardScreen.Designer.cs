@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class boardScreen
+    partial class BoardScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(boardScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoardScreen));
             this.editIcon = new System.Windows.Forms.ImageList(this.components);
             this.newBrd = new System.Windows.Forms.Button();
             this.taskPanel = new System.Windows.Forms.Panel();

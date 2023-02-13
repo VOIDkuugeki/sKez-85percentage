@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class profilePg
+    partial class ProfilePg
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(profilePg));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfilePg));
             this.AccountBx = new System.Windows.Forms.GroupBox();
             this.mail_txt = new System.Windows.Forms.TextBox();
             this.Mail = new System.Windows.Forms.Label();
@@ -280,7 +280,7 @@
             // 
             this.dltPnl.BackColor = System.Drawing.Color.Transparent;
             this.dltPnl.Controls.Add(this.dltBtn);
-            this.dltPnl.Location = new System.Drawing.Point(20, 675);
+            this.dltPnl.Location = new System.Drawing.Point(15, 717);
             this.dltPnl.Margin = new System.Windows.Forms.Padding(0);
             this.dltPnl.Name = "dltPnl";
             this.dltPnl.Padding = new System.Windows.Forms.Padding(3);
@@ -294,8 +294,8 @@
             this.dltBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dltBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dltBtn.FlatAppearance.BorderSize = 0;
-            this.dltBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.dltBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
+            this.dltBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.dltBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.dltBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dltBtn.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dltBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -308,6 +308,8 @@
             this.dltBtn.TabIndex = 4;
             this.dltBtn.Text = "Delete Account";
             this.dltBtn.UseVisualStyleBackColor = false;
+            this.dltBtn.DragEnter += new System.Windows.Forms.DragEventHandler(this.dltBtn_DragEnter);
+            this.dltBtn.DragLeave += new System.EventHandler(this.dltBtn_DragLeave);
             // 
             // ID
             // 
@@ -330,7 +332,10 @@
             // 
             // backBtn
             // 
+            this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.backBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -342,6 +347,7 @@
             this.backBtn.TabIndex = 9;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // imageList1
             // 
@@ -349,7 +355,7 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "single_arrow.png");
             // 
-            // profilePg
+            // ProfilePg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -362,8 +368,9 @@
             this.Controls.Add(this.Username);
             this.Controls.Add(this.InfoBx);
             this.Controls.Add(this.AccountBx);
-            this.Name = "profilePg";
-            this.Size = new System.Drawing.Size(864, 747);
+            this.Name = "ProfilePg";
+            this.Size = new System.Drawing.Size(864, 778);
+            this.Load += new System.EventHandler(this.ProfilePg_Load);
             this.AccountBx.ResumeLayout(false);
             this.AccountBx.PerformLayout();
             this.mailPnl.ResumeLayout(false);

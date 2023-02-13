@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    partial class mainScreen
+    partial class MainScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace sKez
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.narBar = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.quickPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -40,20 +40,19 @@ namespace sKez
             this.narbarIcon = new System.Windows.Forms.ImageList(this.components);
             this.calendarNvgBtn = new System.Windows.Forms.Button();
             this.settingNvgBtn = new System.Windows.Forms.Button();
-            this.userPnl1 = new sKez.userPnl();
+            this.userPnl1 = new sKez.UserPnl();
             this.header = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.minimizeBtn = new System.Windows.Forms.Button();
+            this.userBtn = new System.Windows.Forms.Button();
             this.controlIcon = new System.Windows.Forms.ImageList(this.components);
+            this.minimizeBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.editIcon = new System.Windows.Forms.ImageList(this.components);
-            this.content = new System.Windows.Forms.Panel();
-            this.mainPg1 = new sKez.mainPg();
+            this.Content = new System.Windows.Forms.Panel();
             this.narBar.SuspendLayout();
             this.quickPanel.SuspendLayout();
             this.header.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.content.SuspendLayout();
             this.SuspendLayout();
             // 
             // narBar
@@ -202,13 +201,37 @@ namespace sKez
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.userBtn);
             this.panel2.Controls.Add(this.minimizeBtn);
             this.panel2.Controls.Add(this.closeBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(797, 0);
+            this.panel2.Location = new System.Drawing.Point(760, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(67, 30);
+            this.panel2.Size = new System.Drawing.Size(104, 30);
             this.panel2.TabIndex = 3;
+            // 
+            // userBtn
+            // 
+            this.userBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.userBtn.FlatAppearance.BorderSize = 0;
+            this.userBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userBtn.ImageKey = "user-icon.png";
+            this.userBtn.ImageList = this.controlIcon;
+            this.userBtn.Location = new System.Drawing.Point(20, 0);
+            this.userBtn.Name = "userBtn";
+            this.userBtn.Size = new System.Drawing.Size(24, 24);
+            this.userBtn.TabIndex = 0;
+            this.userBtn.UseVisualStyleBackColor = false;
+            this.userBtn.Click += new System.EventHandler(this.userBtn_Click);
+            // 
+            // controlIcon
+            // 
+            this.controlIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("controlIcon.ImageStream")));
+            this.controlIcon.TransparentColor = System.Drawing.Color.Transparent;
+            this.controlIcon.Images.SetKeyName(0, "close-icon.png");
+            this.controlIcon.Images.SetKeyName(1, "minimize-icon.png");
+            this.controlIcon.Images.SetKeyName(2, "user-icon.png");
             // 
             // minimizeBtn
             // 
@@ -218,19 +241,12 @@ namespace sKez
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.ImageKey = "minimize-icon.png";
             this.minimizeBtn.ImageList = this.controlIcon;
-            this.minimizeBtn.Location = new System.Drawing.Point(13, 0);
+            this.minimizeBtn.Location = new System.Drawing.Point(50, 0);
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.Size = new System.Drawing.Size(24, 24);
             this.minimizeBtn.TabIndex = 0;
             this.minimizeBtn.UseVisualStyleBackColor = false;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
-            // 
-            // controlIcon
-            // 
-            this.controlIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("controlIcon.ImageStream")));
-            this.controlIcon.TransparentColor = System.Drawing.Color.Transparent;
-            this.controlIcon.Images.SetKeyName(0, "close-icon.png");
-            this.controlIcon.Images.SetKeyName(1, "minimize-icon.png");
             // 
             // closeBtn
             // 
@@ -240,7 +256,7 @@ namespace sKez
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.ImageKey = "close-icon.png";
             this.closeBtn.ImageList = this.controlIcon;
-            this.closeBtn.Location = new System.Drawing.Point(43, 0);
+            this.closeBtn.Location = new System.Drawing.Point(80, 0);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(24, 24);
             this.closeBtn.TabIndex = 0;
@@ -255,25 +271,15 @@ namespace sKez
             this.editIcon.Images.SetKeyName(1, "add-icon.png");
             this.editIcon.Images.SetKeyName(2, "delete-icon.png");
             // 
-            // content
+            // Content
             // 
-            this.content.Controls.Add(this.mainPg1);
-            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content.Location = new System.Drawing.Point(160, 30);
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(864, 738);
-            this.content.TabIndex = 3;
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Location = new System.Drawing.Point(160, 30);
+            this.Content.Name = "Content";
+            this.Content.Size = new System.Drawing.Size(864, 738);
+            this.Content.TabIndex = 3;
             // 
-            // mainPg1
-            // 
-            this.mainPg1.BackColor = System.Drawing.Color.Lavender;
-            this.mainPg1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPg1.Location = new System.Drawing.Point(0, 0);
-            this.mainPg1.Name = "mainPg1";
-            this.mainPg1.Size = new System.Drawing.Size(864, 738);
-            this.mainPg1.TabIndex = 0;
-            // 
-            // mainScreen
+            // MainScreen
             // 
             this.AccessibleName = "mscr";
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -281,20 +287,19 @@ namespace sKez
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1024, 768);
-            this.Controls.Add(this.content);
+            this.Controls.Add(this.Content);
             this.Controls.Add(this.header);
             this.Controls.Add(this.narBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1024, 768);
             this.MinimumSize = new System.Drawing.Size(1024, 768);
-            this.Name = "mainScreen";
+            this.Name = "MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainScreen_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainScreen_FormClosed);
             this.narBar.ResumeLayout(false);
             this.quickPanel.ResumeLayout(false);
             this.header.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.content.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -314,9 +319,9 @@ namespace sKez
         private Button closeBtn;
         private ImageList editIcon;
         private TableLayoutPanel quickPanel;
-        private userPnl userPnl1;
-        private Panel content;
-        private mainPg mainPg1;
+        private UserPnl userPnl1;
+        private Panel Content;
+        private Button userBtn;
     }
 }
 

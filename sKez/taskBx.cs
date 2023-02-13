@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class taskBx : UserControl
+    public partial class TaskBx : UserControl
     {
-        public taskBx()
+        public TaskBx()
         {
             InitializeComponent();
         }

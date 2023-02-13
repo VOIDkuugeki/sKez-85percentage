@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class calendarTab : UserControl
+    public partial class CalendarTab : UserControl
     {
-        public calendarTab()
+        public CalendarTab()
         {
             InitializeComponent();
+        }
+
+        private void monthCalendar1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

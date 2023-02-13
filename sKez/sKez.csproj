@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,17 +63,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="boardScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="boardScreen.Designer.cs">
-      <DependentUpon>boardScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="calendarTab.cs">
+    <Compile Include="UCBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="calendarTab.Designer.cs">
-      <DependentUpon>calendarTab.cs</DependentUpon>
+    <Compile Include="UCBoard.Designer.cs">
+      <DependentUpon>UCBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardScreen.Designer.cs">
+      <DependentUpon>BoardScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CalendarTab.Designer.cs">
+      <DependentUpon>CalendarTab.cs</DependentUpon>
     </Compile>
     <Compile Include="class\workspace\Board.cs" />
     <Compile Include="class\workspace\GroupTask.cs" />
@@ -81,133 +89,202 @@
     <Compile Include="class\workspace\Task.cs" />
     <Compile Include="class\account\User.cs" />
     <Compile Include="class\workspace\Workspace.cs" />
+    <Compile Include="CreateBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBoard.Designer.cs">
+      <DependentUpon>CreateBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DayCalendar.Designer.cs">
+      <DependentUpon>DayCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupBx.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GroupBx.Designer.cs">
       <DependentUpon>GroupBx.cs</DependentUpon>
     </Compile>
-    <Compile Include="mainPg.cs">
+    <Compile Include="MainPg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="mainPg.Designer.cs">
-      <DependentUpon>mainPg.cs</DependentUpon>
+    <Compile Include="MainPg.Designer.cs">
+      <DependentUpon>MainPg.cs</DependentUpon>
     </Compile>
-    <Compile Include="profilePg.cs">
+    <Compile Include="MonthCalendar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="profilePg.Designer.cs">
-      <DependentUpon>profilePg.cs</DependentUpon>
+    <Compile Include="MonthCalendar.Designer.cs">
+      <DependentUpon>MonthCalendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="userPnl.cs">
+    <Compile Include="ProfilePg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="userPnl.Designer.cs">
-      <DependentUpon>userPnl.cs</DependentUpon>
+    <Compile Include="ProfilePg.Designer.cs">
+      <DependentUpon>ProfilePg.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginPg.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="loginPg.Designer.cs">
-      <DependentUpon>loginPg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="newGrp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="newGrp.Designer.cs">
-      <DependentUpon>newGrp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="newTsk.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="newTsk.Designer.cs">
-      <DependentUpon>newTsk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="note.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="note.Designer.cs">
-      <DependentUpon>note.cs</DependentUpon>
-    </Compile>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="registerInfo.cs">
+    <Compile Include="UCBlank.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="registerInfo.Designer.cs">
-      <DependentUpon>registerInfo.cs</DependentUpon>
+    <Compile Include="UCBlank.Designer.cs">
+      <DependentUpon>UCBlank.cs</DependentUpon>
     </Compile>
-    <Compile Include="signupPg.cs">
+    <Compile Include="UCDays_month.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="signupPg.Designer.cs">
-      <DependentUpon>signupPg.cs</DependentUpon>
+    <Compile Include="UCDays_month.Designer.cs">
+      <DependentUpon>UCDays_month.cs</DependentUpon>
     </Compile>
-    <Compile Include="taskBx.cs">
+    <Compile Include="UCDays_week.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="taskBx.Designer.cs">
-      <DependentUpon>taskBx.cs</DependentUpon>
+    <Compile Include="UCDays_week.Designer.cs">
+      <DependentUpon>UCDays_week.cs</DependentUpon>
     </Compile>
-    <Compile Include="userAccess.cs">
+    <Compile Include="RenameForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="userAccess.Designer.cs">
-      <DependentUpon>userAccess.cs</DependentUpon>
+    <Compile Include="RenameForm.Designer.cs">
+      <DependentUpon>RenameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="verifyPg.cs">
+    <Compile Include="UserPnl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="verifyPg.Designer.cs">
-      <DependentUpon>verifyPg.cs</DependentUpon>
+    <Compile Include="UserPnl.Designer.cs">
+      <DependentUpon>UserPnl.cs</DependentUpon>
     </Compile>
-    <Compile Include="mainScreen.cs">
+    <Compile Include="LoginPg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginPg.Designer.cs">
+      <DependentUpon>LoginPg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGrp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewGrp.Designer.cs">
+      <DependentUpon>NewGrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewTsk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewTsk.Designer.cs">
+      <DependentUpon>NewTsk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Note.Designer.cs">
+      <DependentUpon>Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegisterInfo.Designer.cs">
+      <DependentUpon>RegisterInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignupPg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SignupPg.Designer.cs">
+      <DependentUpon>SignupPg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskBx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskBx.Designer.cs">
+      <DependentUpon>TaskBx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainScreen.Designer.cs">
-      <DependentUpon>mainScreen.cs</DependentUpon>
+    <Compile Include="UserAccess.Designer.cs">
+      <DependentUpon>UserAccess.cs</DependentUpon>
     </Compile>
-    <Compile Include="workSpaceTab.cs">
+    <Compile Include="VerifyPg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="workSpaceTab.Designer.cs">
-      <DependentUpon>workSpaceTab.cs</DependentUpon>
+    <Compile Include="VerifyPg.Designer.cs">
+      <DependentUpon>VerifyPg.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="boardScreen.resx">
-      <DependentUpon>boardScreen.cs</DependentUpon>
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeekCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WeekCalendar.Designer.cs">
+      <DependentUpon>WeekCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WSTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WSTab.Designer.cs">
+      <DependentUpon>WSTab.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UCBoard.resx">
+      <DependentUpon>UCBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="calendarTab.resx">
-      <DependentUpon>calendarTab.cs</DependentUpon>
+    <EmbeddedResource Include="BoardScreen.resx">
+      <DependentUpon>BoardScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarTab.resx">
+      <DependentUpon>CalendarTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateBoard.resx">
+      <DependentUpon>CreateBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupBx.resx">
       <DependentUpon>GroupBx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mainPg.resx">
-      <DependentUpon>mainPg.cs</DependentUpon>
+    <EmbeddedResource Include="MainPg.resx">
+      <DependentUpon>MainPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="profilePg.resx">
-      <DependentUpon>profilePg.cs</DependentUpon>
+    <EmbeddedResource Include="MonthCalendar.resx">
+      <DependentUpon>MonthCalendar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="userPnl.resx">
-      <DependentUpon>userPnl.cs</DependentUpon>
+    <EmbeddedResource Include="ProfilePg.resx">
+      <DependentUpon>ProfilePg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginPg.resx">
-      <DependentUpon>loginPg.cs</DependentUpon>
+    <EmbeddedResource Include="UCBlank.resx">
+      <DependentUpon>UCBlank.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newGrp.resx">
-      <DependentUpon>newGrp.cs</DependentUpon>
+    <EmbeddedResource Include="UCDays_month.resx">
+      <DependentUpon>UCDays_month.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newTsk.resx">
-      <DependentUpon>newTsk.cs</DependentUpon>
+    <EmbeddedResource Include="UCDays_week.resx">
+      <DependentUpon>UCDays_week.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="note.resx">
-      <DependentUpon>note.cs</DependentUpon>
+    <EmbeddedResource Include="RenameForm.resx">
+      <DependentUpon>RenameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPnl.resx">
+      <DependentUpon>UserPnl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPg.resx">
+      <DependentUpon>LoginPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGrp.resx">
+      <DependentUpon>NewGrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewTsk.resx">
+      <DependentUpon>NewTsk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Note.resx">
+      <DependentUpon>Note.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\sKez.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -215,26 +292,29 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="registerInfo.resx">
-      <DependentUpon>registerInfo.cs</DependentUpon>
+    <EmbeddedResource Include="RegisterInfo.resx">
+      <DependentUpon>RegisterInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="signupPg.resx">
-      <DependentUpon>signupPg.cs</DependentUpon>
+    <EmbeddedResource Include="SignupPg.resx">
+      <DependentUpon>SignupPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="taskBx.resx">
-      <DependentUpon>taskBx.cs</DependentUpon>
+    <EmbeddedResource Include="TaskBx.resx">
+      <DependentUpon>TaskBx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="userAccess.resx">
-      <DependentUpon>userAccess.cs</DependentUpon>
+    <EmbeddedResource Include="UserAccess.resx">
+      <DependentUpon>UserAccess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="verifyPg.resx">
-      <DependentUpon>verifyPg.cs</DependentUpon>
+    <EmbeddedResource Include="VerifyPg.resx">
+      <DependentUpon>VerifyPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mainScreen.resx">
-      <DependentUpon>mainScreen.cs</DependentUpon>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="workSpaceTab.resx">
-      <DependentUpon>workSpaceTab.cs</DependentUpon>
+    <EmbeddedResource Include="WeekCalendar.resx">
+      <DependentUpon>WeekCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WSTab.resx">
+      <DependentUpon>WSTab.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -267,6 +347,7 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
+    <Folder Include="class\extra\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
@@ -278,6 +359,9 @@
     </Content>
     <Content Include="obj\Debug\sKez.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Resources\bitmap2.png" />
+    <None Include="Resources\bitmap21.png" />
+    <None Include="Resources\bitmap1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

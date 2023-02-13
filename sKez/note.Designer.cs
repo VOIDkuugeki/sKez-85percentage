@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class note
+    partial class Note
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,11 +30,11 @@
         {
             this.header = new System.Windows.Forms.Panel();
             this.titleTxt = new System.Windows.Forms.TextBox();
-            this.content = new System.Windows.Forms.Panel();
-            this.newGrp1 = new sKez.newGrp();
-            this.newTsk1 = new sKez.newTsk();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.newTsk1 = new sKez.NewTsk();
+            this.newGrp1 = new sKez.NewGrp();
             this.header.SuspendLayout();
-            this.content.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // header
@@ -43,7 +43,7 @@
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(160, 42);
+            this.header.Size = new System.Drawing.Size(172, 42);
             this.header.TabIndex = 0;
             // 
             // titleTxt
@@ -53,57 +53,53 @@
             this.titleTxt.Location = new System.Drawing.Point(0, 0);
             this.titleTxt.Multiline = true;
             this.titleTxt.Name = "titleTxt";
-            this.titleTxt.Size = new System.Drawing.Size(160, 42);
+            this.titleTxt.Size = new System.Drawing.Size(172, 42);
             this.titleTxt.TabIndex = 0;
-            this.titleTxt.Text = "Title";
+            this.titleTxt.Text = "New List";
             this.titleTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // content
+            // flowLayoutPanel1
             // 
-            this.content.AutoSize = true;
-            this.content.Controls.Add(this.newTsk1);
-            this.content.Controls.Add(this.newGrp1);
-            this.content.Dock = System.Windows.Forms.DockStyle.Top;
-            this.content.Location = new System.Drawing.Point(0, 42);
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(160, 80);
-            this.content.TabIndex = 1;
-            // 
-            // newGrp1
-            // 
-            this.newGrp1.BackColor = System.Drawing.Color.Transparent;
-            this.newGrp1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.newGrp1.Location = new System.Drawing.Point(0, 0);
-            this.newGrp1.Name = "newGrp1";
-            this.newGrp1.Size = new System.Drawing.Size(160, 40);
-            this.newGrp1.TabIndex = 0;
+            this.flowLayoutPanel1.Controls.Add(this.newTsk1);
+            this.flowLayoutPanel1.Controls.Add(this.newGrp1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 42);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(172, 100);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // newTsk1
             // 
             this.newTsk1.BackColor = System.Drawing.Color.Transparent;
             this.newTsk1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.newTsk1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.newTsk1.Location = new System.Drawing.Point(0, 40);
+            this.newTsk1.Location = new System.Drawing.Point(3, 3);
             this.newTsk1.Name = "newTsk1";
-            this.newTsk1.Size = new System.Drawing.Size(160, 40);
-            this.newTsk1.TabIndex = 1;
+            this.newTsk1.Size = new System.Drawing.Size(80, 36);
+            this.newTsk1.TabIndex = 0;
             // 
-            // note
+            // newGrp1
+            // 
+            this.newGrp1.BackColor = System.Drawing.Color.Transparent;
+            this.newGrp1.Location = new System.Drawing.Point(89, 3);
+            this.newGrp1.Name = "newGrp1";
+            this.newGrp1.Size = new System.Drawing.Size(80, 36);
+            this.newGrp1.TabIndex = 1;
+            // 
+            // Note
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.content);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.header);
-            this.Name = "note";
-            this.Size = new System.Drawing.Size(160, 122);
+            this.Name = "Note";
+            this.Size = new System.Drawing.Size(172, 142);
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
-            this.content.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -111,8 +107,8 @@
 
         private System.Windows.Forms.Panel header;
         private System.Windows.Forms.TextBox titleTxt;
-        private System.Windows.Forms.Panel content;
-        private newTsk newTsk1;
-        private newGrp newGrp1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private NewTsk newTsk1;
+        private NewGrp newGrp1;
     }
 }

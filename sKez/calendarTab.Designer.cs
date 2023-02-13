@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class calendarTab
+    partial class CalendarTab
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,56 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(calendarTab));
-            this.button2 = new System.Windows.Forms.Button();
-            this.mthvwBtn = new System.Windows.Forms.Button();
-            this.dayvwBtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarTab));
             this.calendarIcon = new System.Windows.Forms.ImageList(this.components);
+            this.content = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new sKez.MonthCalendar();
+            this.content.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ImageKey = "Month View.png";
-            this.button2.ImageList = this.calendarIcon;
-            this.button2.Location = new System.Drawing.Point(834, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 32);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // mthvwBtn
-            // 
-            this.mthvwBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mthvwBtn.FlatAppearance.BorderSize = 0;
-            this.mthvwBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.mthvwBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.mthvwBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mthvwBtn.ImageKey = "Week View.png";
-            this.mthvwBtn.ImageList = this.calendarIcon;
-            this.mthvwBtn.Location = new System.Drawing.Point(792, 5);
-            this.mthvwBtn.Name = "mthvwBtn";
-            this.mthvwBtn.Size = new System.Drawing.Size(36, 32);
-            this.mthvwBtn.TabIndex = 2;
-            this.mthvwBtn.UseVisualStyleBackColor = true;
-            // 
-            // dayvwBtn
-            // 
-            this.dayvwBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dayvwBtn.FlatAppearance.BorderSize = 0;
-            this.dayvwBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.dayvwBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.dayvwBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dayvwBtn.ImageKey = "Day View.png";
-            this.dayvwBtn.ImageList = this.calendarIcon;
-            this.dayvwBtn.Location = new System.Drawing.Point(750, 5);
-            this.dayvwBtn.Name = "dayvwBtn";
-            this.dayvwBtn.Size = new System.Drawing.Size(36, 32);
-            this.dayvwBtn.TabIndex = 3;
-            this.dayvwBtn.UseVisualStyleBackColor = true;
             // 
             // calendarIcon
             // 
@@ -88,25 +44,40 @@
             this.calendarIcon.Images.SetKeyName(1, "Week View.png");
             this.calendarIcon.Images.SetKeyName(2, "Month View.png");
             // 
-            // calendarPg
+            // content
+            // 
+            this.content.Controls.Add(this.monthCalendar1);
+            this.content.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.content.Location = new System.Drawing.Point(0, 0);
+            this.content.Name = "content";
+            this.content.Size = new System.Drawing.Size(864, 642);
+            this.content.TabIndex = 4;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.Lavender;
+            this.monthCalendar1.Location = new System.Drawing.Point(3, 29);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.Size = new System.Drawing.Size(860, 610);
+            this.monthCalendar1.TabIndex = 0;
+            this.monthCalendar1.Load += new System.EventHandler(this.monthCalendar1_Load);
+            // 
+            // calendarTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.mthvwBtn);
-            this.Controls.Add(this.dayvwBtn);
-            this.Name = "calendarPg";
-            this.Size = new System.Drawing.Size(876, 650);
+            this.Controls.Add(this.content);
+            this.Name = "calendarTab";
+            this.Size = new System.Drawing.Size(864, 642);
+            this.content.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button mthvwBtn;
-        private System.Windows.Forms.Button dayvwBtn;
         private System.Windows.Forms.ImageList calendarIcon;
+        private System.Windows.Forms.Panel content;
+        private MonthCalendar monthCalendar1;
     }
 }

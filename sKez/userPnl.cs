@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class userPnl : UserControl
+    public partial class UserPnl : UserControl
     {
-        public userPnl()
+        public UserPnl()
         {
             InitializeComponent();
+            this.NameTag.Text = User.Uname;
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)

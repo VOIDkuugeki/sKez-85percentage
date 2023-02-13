@@ -13,10 +13,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace sKez
 {
-    public partial class signupPg : UserControl
+    public partial class SignupPg : UserControl
     {
         String mail;
-        public signupPg(String mail)
+        public SignupPg(String mail)
         {
             InitializeComponent();
             this.mail = mail;
@@ -75,7 +75,7 @@ namespace sKez
                 {
                     cnt.Close();
                 }
-                openUControls(new registerInfo(mail));
+                openUControls(new RegisterInfo(mail));
             }
         }
         

@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class userAccess
+    partial class UserAccess
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userAccess));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAccess));
             this.mainContainter = new System.Windows.Forms.Panel();
-            this.loginPg2 = new sKez.loginPg();
+            this.loginPg2 = new sKez.LoginPg();
             this.pagePnl = new System.Windows.Forms.TableLayoutPanel();
             this.signupPnl = new System.Windows.Forms.Panel();
             this.signupBtn = new System.Windows.Forms.Button();
@@ -207,6 +207,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel signupPnl;
         private System.Windows.Forms.Button signupBtn;
-        private loginPg loginPg2;
+        private LoginPg loginPg2;
     }
 }

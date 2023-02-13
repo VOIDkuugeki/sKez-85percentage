@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class note : UserControl
+    public partial class Note : UserControl
     {
-        public note()
+        public Note()
         {
             InitializeComponent();
         }

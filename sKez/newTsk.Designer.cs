@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class newTsk
+    partial class NewTsk
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newTsk));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewTsk));
             this.addBtn = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
@@ -47,10 +47,11 @@
             this.addBtn.ImageList = this.imageList1;
             this.addBtn.Location = new System.Drawing.Point(0, 0);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(160, 40);
+            this.addBtn.Size = new System.Drawing.Size(80, 36);
             this.addBtn.TabIndex = 0;
             this.addBtn.Tag = "";
-            this.addBtn.Text = "New task";
+            this.addBtn.Text = "Task";
+            this.addBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addBtn.UseVisualStyleBackColor = true;
             // 
             // imageList1
@@ -59,15 +60,15 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "add-icon.png");
             // 
-            // newTsk
+            // NewTsk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.addBtn);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Name = "newTsk";
-            this.Size = new System.Drawing.Size(160, 40);
+            this.Name = "NewTsk";
+            this.Size = new System.Drawing.Size(80, 36);
             this.ResumeLayout(false);
 
         }

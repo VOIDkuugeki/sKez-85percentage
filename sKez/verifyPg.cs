@@ -15,9 +15,9 @@ using System.Data.SqlClient;
 
 namespace sKez
 {
-    public partial class verifyPg : UserControl
+    public partial class VerifyPg : UserControl
     {
-        public verifyPg()
+        public VerifyPg()
         {
             InitializeComponent();
         }
@@ -52,7 +52,7 @@ namespace sKez
             if(codeBx.Text == code.ToString())
             {
                 String mail = txt_mail.Text;
-                openUControls(new signupPg(mail));
+                openUControls(new SignupPg(mail));
             }
             else
             {

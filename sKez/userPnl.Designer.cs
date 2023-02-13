@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class userPnl
+    partial class UserPnl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,96 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.logoutBtn = new System.Windows.Forms.Button();
-            this.profileBtn = new System.Windows.Forms.Button();
-            this.userIcon = new System.Windows.Forms.Button();
-            this.nameTag = new System.Windows.Forms.Label();
+            this.LogoutBtn = new System.Windows.Forms.Button();
+            this.UserIcon = new System.Windows.Forms.Button();
+            this.NameTag = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // logoutBtn
+            // LogoutBtn
             // 
-            this.logoutBtn.BackColor = System.Drawing.Color.BlueViolet;
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
-            this.logoutBtn.FlatAppearance.BorderSize = 0;
-            this.logoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.logoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Meiryo UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.ForeColor = System.Drawing.Color.Lavender;
-            this.logoutBtn.Location = new System.Drawing.Point(74, 81);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(82, 36);
-            this.logoutBtn.TabIndex = 5;
-            this.logoutBtn.Text = "Log out";
-            this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            this.LogoutBtn.BackColor = System.Drawing.Color.BlueViolet;
+            this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
+            this.LogoutBtn.FlatAppearance.BorderSize = 0;
+            this.LogoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.LogoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.LogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutBtn.Font = new System.Drawing.Font("Meiryo UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutBtn.ForeColor = System.Drawing.Color.Lavender;
+            this.LogoutBtn.Location = new System.Drawing.Point(33, 87);
+            this.LogoutBtn.Name = "LogoutBtn";
+            this.LogoutBtn.Size = new System.Drawing.Size(82, 36);
+            this.LogoutBtn.TabIndex = 5;
+            this.LogoutBtn.Text = "Log out";
+            this.LogoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.LogoutBtn.UseVisualStyleBackColor = true;
+            this.LogoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // profileBtn
+            // UserIcon
             // 
-            this.profileBtn.BackColor = System.Drawing.Color.Transparent;
-            this.profileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.profileBtn.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
-            this.profileBtn.FlatAppearance.BorderSize = 0;
-            this.profileBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.profileBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.profileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profileBtn.Font = new System.Drawing.Font("Meiryo UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profileBtn.ForeColor = System.Drawing.Color.Black;
-            this.profileBtn.Location = new System.Drawing.Point(3, 81);
-            this.profileBtn.Name = "profileBtn";
-            this.profileBtn.Size = new System.Drawing.Size(77, 36);
-            this.profileBtn.TabIndex = 6;
-            this.profileBtn.TabStop = false;
-            this.profileBtn.Text = "Profile";
-            this.profileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.profileBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.profileBtn.UseVisualStyleBackColor = true;
+            this.UserIcon.BackgroundImage = global::sKez.Properties.Resources.user;
+            this.UserIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UserIcon.FlatAppearance.BorderSize = 0;
+            this.UserIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.UserIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.UserIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UserIcon.ImageKey = "(none)";
+            this.UserIcon.Location = new System.Drawing.Point(1, 10);
+            this.UserIcon.MaximumSize = new System.Drawing.Size(64, 64);
+            this.UserIcon.MinimumSize = new System.Drawing.Size(40, 40);
+            this.UserIcon.Name = "UserIcon";
+            this.UserIcon.Size = new System.Drawing.Size(64, 64);
+            this.UserIcon.TabIndex = 4;
+            this.UserIcon.TabStop = false;
+            this.UserIcon.UseVisualStyleBackColor = true;
             // 
-            // userIcon
+            // NameTag
             // 
-            this.userIcon.BackgroundImage = global::sKez.Properties.Resources.user;
-            this.userIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userIcon.FlatAppearance.BorderSize = 0;
-            this.userIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.userIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.userIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userIcon.ImageKey = "(none)";
-            this.userIcon.Location = new System.Drawing.Point(1, 10);
-            this.userIcon.MaximumSize = new System.Drawing.Size(64, 64);
-            this.userIcon.MinimumSize = new System.Drawing.Size(40, 40);
-            this.userIcon.Name = "userIcon";
-            this.userIcon.Size = new System.Drawing.Size(64, 64);
-            this.userIcon.TabIndex = 4;
-            this.userIcon.TabStop = false;
-            this.userIcon.UseVisualStyleBackColor = true;
+            this.NameTag.AutoEllipsis = true;
+            this.NameTag.BackColor = System.Drawing.Color.Transparent;
+            this.NameTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NameTag.Font = new System.Drawing.Font("Meiryo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTag.Location = new System.Drawing.Point(67, 10);
+            this.NameTag.Name = "NameTag";
+            this.NameTag.Size = new System.Drawing.Size(93, 64);
+            this.NameTag.TabIndex = 7;
+            this.NameTag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // nameTag
-            // 
-            this.nameTag.AutoEllipsis = true;
-            this.nameTag.BackColor = System.Drawing.Color.Transparent;
-            this.nameTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nameTag.Font = new System.Drawing.Font("Meiryo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTag.Location = new System.Drawing.Point(67, 10);
-            this.nameTag.Name = "nameTag";
-            this.nameTag.Size = new System.Drawing.Size(93, 64);
-            this.nameTag.TabIndex = 7;
-            this.nameTag.Text = User.Uname;
-            this.nameTag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // userPnl
+            // UserPnl
             // 
             this.AccessibleName = "userPnl";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
-            this.Controls.Add(this.logoutBtn);
-            this.Controls.Add(this.profileBtn);
-            this.Controls.Add(this.userIcon);
-            this.Controls.Add(this.nameTag);
-            this.Name = "userPnl";
+            this.Controls.Add(this.LogoutBtn);
+            this.Controls.Add(this.UserIcon);
+            this.Controls.Add(this.NameTag);
+            this.Name = "UserPnl";
             this.Size = new System.Drawing.Size(160, 126);
             this.ResumeLayout(false);
 
@@ -125,9 +100,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button logoutBtn;
-        private System.Windows.Forms.Button profileBtn;
-        private System.Windows.Forms.Button userIcon;
-        private System.Windows.Forms.Label nameTag;
+        private System.Windows.Forms.Button LogoutBtn;
+        private System.Windows.Forms.Button UserIcon;
+        private System.Windows.Forms.Label NameTag;
     }
 }

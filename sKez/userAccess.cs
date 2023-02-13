@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class userAccess : Form
+    public partial class UserAccess : Form
     {
-        public userAccess()
+        public UserAccess()
         {
             InitializeComponent();
         }
@@ -61,11 +61,11 @@ namespace sKez
             switch (btn.AccessibleName)
             {
                 case "loginBtn":
-                    openUControls(new loginPg());
+                    openUControls(new LoginPg());
                     loginPnl.BackColor = System.Drawing.Color.Gold;
                     break;
                 case "signupBtn":
-                    openUControls(new verifyPg());
+                    openUControls(new VerifyPg());
                     signupPnl.BackColor = System.Drawing.Color.Gold;
                     break;
                 default:

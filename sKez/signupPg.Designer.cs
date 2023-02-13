@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class signupPg
+    partial class SignupPg
     {
         /// <summary> 
         /// Required designer variable.

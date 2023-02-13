@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class mainScreen : Form
+    public partial class MainScreen : Form
     {
-        public mainScreen()
+        public MainScreen()
         {
             InitializeComponent();
+            openUControls(new MainPg());
         }
 
         private void minimizeBtn_Click(object sender, EventArgs e)
@@ -20,8 +23,18 @@ namespace sKez
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            userAccess access = new userAccess();
+            UserAccess access = new UserAccess();
             access.Show();
+        }
+        private void openUControls(UserControl u)
+        {
+            List<Control> ctrls = new List<Control>(this.Content.Controls.Count);
+            this.Content.Controls.Clear();
+            foreach (Control c in ctrls)
+                c.Dispose();
+            this.Content.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
         /// Draggable panel:
@@ -41,7 +54,12 @@ namespace sKez
             }
         }
 
-        private void mainScreen_FormClosed(object sender, FormClosedEventArgs e)
+        private void userBtn_Click(object sender, EventArgs e)
+        {
+            openUControls(new ProfilePg());
+        }
+
+        private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Dispose();
         }

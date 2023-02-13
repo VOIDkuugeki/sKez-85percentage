@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class loginPg : UserControl
+    public partial class LoginPg : UserControl
     {
-        public loginPg()
+        public LoginPg()
         {
             InitializeComponent();
         }
@@ -57,8 +57,8 @@ namespace sKez
                 Profile.setProfile();
 
                 this.ParentForm.Hide();
-                mainScreen mscr = new mainScreen();
-                mscr.Show();    
+                MainScreen mscr = new MainScreen();
+                mscr.Show();
             }
             else
             {

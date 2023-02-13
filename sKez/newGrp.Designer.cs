@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class newGrp
+    partial class NewGrp
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newGrp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewGrp));
             this.button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
@@ -49,9 +49,10 @@
             this.button1.ImageList = this.imageList1;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 40);
+            this.button1.Size = new System.Drawing.Size(80, 36);
             this.button1.TabIndex = 0;
-            this.button1.Text = "New group";
+            this.button1.Text = "Group";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // imageList1
@@ -60,14 +61,14 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "add-icon.png");
             // 
-            // newGrp
+            // NewGrp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.button1);
-            this.Name = "newGrp";
-            this.Size = new System.Drawing.Size(160, 40);
+            this.Name = "NewGrp";
+            this.Size = new System.Drawing.Size(80, 36);
             this.ResumeLayout(false);
 
         }

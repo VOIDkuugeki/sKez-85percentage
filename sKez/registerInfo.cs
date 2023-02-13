@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class registerInfo : UserControl
+    public partial class RegisterInfo : UserControl
     {
         String mail;
-        public registerInfo(String mail)
+        public RegisterInfo(String mail)
         {
             InitializeComponent();
             this.mail = mail;

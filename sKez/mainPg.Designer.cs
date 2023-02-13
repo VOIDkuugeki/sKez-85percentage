@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class mainPg
+    partial class MainPg
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,119 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainPg));
-            this.pagesTable = new System.Windows.Forms.TableLayoutPanel();
-            this.calendarBtn = new System.Windows.Forms.Button();
-            this.workspaceBtn = new System.Windows.Forms.Button();
-            this.editIcon = new System.Windows.Forms.ImageList(this.components);
-            this.tab = new System.Windows.Forms.Panel();
-            this.content = new System.Windows.Forms.Panel();
-            this.pagesTable.SuspendLayout();
-            this.tab.SuspendLayout();
+            this.PagesTable = new System.Windows.Forms.TableLayoutPanel();
+            this.CalendarBtn = new System.Windows.Forms.Button();
+            this.WorkspaceBtn = new System.Windows.Forms.Button();
+            this.Tab = new System.Windows.Forms.Panel();
+            this.Content = new System.Windows.Forms.Panel();
+            this.PagesTable.SuspendLayout();
+            this.Tab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pagesTable
+            // PagesTable
             // 
-            this.pagesTable.ColumnCount = 4;
-            this.pagesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.17062F));
-            this.pagesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.59242F));
-            this.pagesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.8673F));
-            this.pagesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.36967F));
-            this.pagesTable.Controls.Add(this.calendarBtn, 2, 0);
-            this.pagesTable.Controls.Add(this.workspaceBtn, 1, 0);
-            this.pagesTable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pagesTable.Location = new System.Drawing.Point(0, 0);
-            this.pagesTable.Name = "pagesTable";
-            this.pagesTable.RowCount = 1;
-            this.pagesTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pagesTable.Size = new System.Drawing.Size(864, 96);
-            this.pagesTable.TabIndex = 6;
+            this.PagesTable.ColumnCount = 4;
+            this.PagesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.17062F));
+            this.PagesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.59242F));
+            this.PagesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.8673F));
+            this.PagesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.36967F));
+            this.PagesTable.Controls.Add(this.CalendarBtn, 2, 0);
+            this.PagesTable.Controls.Add(this.WorkspaceBtn, 1, 0);
+            this.PagesTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PagesTable.Location = new System.Drawing.Point(0, 0);
+            this.PagesTable.Name = "PagesTable";
+            this.PagesTable.RowCount = 1;
+            this.PagesTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.PagesTable.Size = new System.Drawing.Size(864, 96);
+            this.PagesTable.TabIndex = 6;
             // 
-            // calendarBtn
+            // CalendarBtn
             // 
-            this.calendarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calendarBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.calendarBtn.FlatAppearance.BorderSize = 0;
-            this.calendarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.calendarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.calendarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calendarBtn.Font = new System.Drawing.Font("Meiryo UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calendarBtn.ForeColor = System.Drawing.Color.DarkGray;
-            this.calendarBtn.Location = new System.Drawing.Point(432, 3);
-            this.calendarBtn.Name = "calendarBtn";
-            this.calendarBtn.Size = new System.Drawing.Size(170, 90);
-            this.calendarBtn.TabIndex = 4;
-            this.calendarBtn.Text = "Calendar";
-            this.calendarBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.calendarBtn.UseVisualStyleBackColor = true;
-            this.calendarBtn.Click += new System.EventHandler(this.calendarBtn_Click);
+            this.CalendarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CalendarBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CalendarBtn.FlatAppearance.BorderSize = 0;
+            this.CalendarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.CalendarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.CalendarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalendarBtn.Font = new System.Drawing.Font("Meiryo UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalendarBtn.ForeColor = System.Drawing.Color.DarkGray;
+            this.CalendarBtn.Location = new System.Drawing.Point(432, 3);
+            this.CalendarBtn.Name = "CalendarBtn";
+            this.CalendarBtn.Size = new System.Drawing.Size(170, 90);
+            this.CalendarBtn.TabIndex = 4;
+            this.CalendarBtn.Text = "Calendar";
+            this.CalendarBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CalendarBtn.UseVisualStyleBackColor = true;
+            this.CalendarBtn.Click += new System.EventHandler(this.calendarBtn_Click);
             // 
-            // workspaceBtn
+            // WorkspaceBtn
             // 
-            this.workspaceBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.workspaceBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.workspaceBtn.FlatAppearance.BorderSize = 0;
-            this.workspaceBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.workspaceBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.workspaceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.workspaceBtn.Font = new System.Drawing.Font("Meiryo UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workspaceBtn.ForeColor = System.Drawing.Color.Black;
-            this.workspaceBtn.Location = new System.Drawing.Point(224, 3);
-            this.workspaceBtn.Name = "workspaceBtn";
-            this.workspaceBtn.Size = new System.Drawing.Size(202, 90);
-            this.workspaceBtn.TabIndex = 0;
-            this.workspaceBtn.Text = "Workspace";
-            this.workspaceBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.workspaceBtn.UseVisualStyleBackColor = true;
-            this.workspaceBtn.Click += new System.EventHandler(this.workspaceBtn_Click);
+            this.WorkspaceBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WorkspaceBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.WorkspaceBtn.FlatAppearance.BorderSize = 0;
+            this.WorkspaceBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.WorkspaceBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.WorkspaceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WorkspaceBtn.Font = new System.Drawing.Font("Meiryo UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WorkspaceBtn.ForeColor = System.Drawing.Color.Black;
+            this.WorkspaceBtn.Location = new System.Drawing.Point(224, 3);
+            this.WorkspaceBtn.Name = "WorkspaceBtn";
+            this.WorkspaceBtn.Size = new System.Drawing.Size(202, 90);
+            this.WorkspaceBtn.TabIndex = 0;
+            this.WorkspaceBtn.Text = "Workspace";
+            this.WorkspaceBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.WorkspaceBtn.UseVisualStyleBackColor = true;
+            this.WorkspaceBtn.Click += new System.EventHandler(this.workspaceBtn_Click);
             // 
-            // editIcon
+            // Tab
             // 
-            this.editIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("editIcon.ImageStream")));
-            this.editIcon.TransparentColor = System.Drawing.Color.Transparent;
-            this.editIcon.Images.SetKeyName(0, "pen-icon.png");
-            this.editIcon.Images.SetKeyName(1, "add-icon.png");
-            this.editIcon.Images.SetKeyName(2, "delete-icon.png");
+            this.Tab.Controls.Add(this.Content);
+            this.Tab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab.Location = new System.Drawing.Point(0, 96);
+            this.Tab.Name = "Tab";
+            this.Tab.Size = new System.Drawing.Size(864, 642);
+            this.Tab.TabIndex = 7;
             // 
-            // tab
+            // Content
             // 
-            this.tab.Controls.Add(this.content);
-            this.tab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab.Location = new System.Drawing.Point(0, 96);
-            this.tab.Name = "tab";
-            this.tab.Size = new System.Drawing.Size(864, 642);
-            this.tab.TabIndex = 7;
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Location = new System.Drawing.Point(0, 0);
+            this.Content.Name = "Content";
+            this.Content.Size = new System.Drawing.Size(864, 642);
+            this.Content.TabIndex = 1;
             // 
-            // content
-            // 
-            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content.Location = new System.Drawing.Point(0, 0);
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(864, 642);
-            this.content.TabIndex = 1;
-            // 
-            // mainPg
+            // MainPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.Controls.Add(this.tab);
-            this.Controls.Add(this.pagesTable);
-            this.Name = "mainPg";
+            this.Controls.Add(this.Tab);
+            this.Controls.Add(this.PagesTable);
+            this.Name = "MainPg";
             this.Size = new System.Drawing.Size(864, 738);
-            this.pagesTable.ResumeLayout(false);
-            this.tab.ResumeLayout(false);
+            this.PagesTable.ResumeLayout(false);
+            this.Tab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel pagesTable;
-        private System.Windows.Forms.Button calendarBtn;
-        private System.Windows.Forms.Button workspaceBtn;
-        private System.Windows.Forms.ImageList editIcon;
-        private System.Windows.Forms.Panel tab;
-        private System.Windows.Forms.Panel content;
+        private System.Windows.Forms.TableLayoutPanel PagesTable;
+        private System.Windows.Forms.Button CalendarBtn;
+        private System.Windows.Forms.Button WorkspaceBtn;
+        private System.Windows.Forms.Panel Tab;
+        private System.Windows.Forms.Panel Content;
     }
 }

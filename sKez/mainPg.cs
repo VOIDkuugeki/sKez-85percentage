@@ -10,35 +10,43 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class mainPg : UserControl
+    public partial class MainPg : UserControl
     {
-        workSpaceTab wp = new workSpaceTab();
-        calendarTab cal = new calendarTab();
-        public mainPg()
+        public MainPg()
         {
             InitializeComponent();
-            this.wp.Visible = false;
-            this.cal.Visible = false;
-            this.content.Controls.Add(wp);
-            this.content.Controls.Add(cal);
-            this.wp.Dock = DockStyle.Fill;
-            this.cal.Dock = DockStyle.Fill;
+            openUControls(new WSTab());
         }
 
+        //Open UC
+        private void openUControls(UserControl u)
+        {
+
+            //Clear and dipose controls
+            List<Control> ctrls = new List<Control>(this.Content.Controls.Count);
+            this.Content.Controls.Clear();
+            foreach (Control c in ctrls) c.Dispose();
+
+            //Add new control
+            this.Content.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
+        }
+
+        //Open workspace 
         private void workspaceBtn_Click(object sender, EventArgs e)
         {
-            workspaceBtn.ForeColor = Color.Black;
-            calendarBtn.ForeColor = Color.DarkGray;
-            this.wp.Visible = true;
-            this.cal.Visible = false;
+            WorkspaceBtn.ForeColor = Color.Black;
+            CalendarBtn.ForeColor = Color.DarkGray;
+            openUControls(new WSTab());
         }
 
+        //Open calendar
         private void calendarBtn_Click(object sender, EventArgs e)
         {
-            calendarBtn.ForeColor = Color.Black;
-            workspaceBtn.ForeColor = Color.DarkGray;
-            this.wp.Visible = false;
-            this.cal.Visible = true;
+            CalendarBtn.ForeColor = Color.Black;
+            WorkspaceBtn.ForeColor = Color.DarkGray;
+            openUControls(new CalendarTab());
         }
     }
 }

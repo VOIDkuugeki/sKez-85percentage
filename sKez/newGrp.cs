@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class newGrp : UserControl
+    public partial class NewGrp : UserControl
     {
-        public newGrp()
+        public NewGrp()
         {
             InitializeComponent();
         }

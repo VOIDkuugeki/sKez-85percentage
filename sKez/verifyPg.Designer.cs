@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class verifyPg
+    partial class VerifyPg
     {
         /// <summary> 
         /// Required designer variable.

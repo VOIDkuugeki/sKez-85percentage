@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class boardScreen : Form
+    public partial class BoardScreen : Form
     {
-        public boardScreen()
+        public BoardScreen()
         {
             InitializeComponent();
         }

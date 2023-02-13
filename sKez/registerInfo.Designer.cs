@@ -1,6 +1,6 @@
 ﻿namespace sKez
 {
-    partial class registerInfo
+    partial class RegisterInfo
     {
         /// <summary> 
         /// Required designer variable.
