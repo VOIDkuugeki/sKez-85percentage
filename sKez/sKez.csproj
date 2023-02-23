@@ -76,16 +76,16 @@
     <Compile Include="BoardScr\BoardPg.Designer.cs">
       <DependentUpon>BoardPg.cs</DependentUpon>
     </Compile>
-    <Compile Include="BoardScr\CreateGroup.cs">
+    <Compile Include="BoardScr\Tasks\CreateGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BoardScr\CreateGroup.Designer.cs">
+    <Compile Include="BoardScr\Tasks\CreateGroup.Designer.cs">
       <DependentUpon>CreateGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="BoardScr\CreateTask.cs">
+    <Compile Include="BoardScr\Tasks\CreateTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BoardScr\CreateTask.Designer.cs">
+    <Compile Include="BoardScr\Tasks\CreateTask.Designer.cs">
       <DependentUpon>CreateTask.cs</DependentUpon>
     </Compile>
     <Compile Include="Access\ChangeMail.cs">
@@ -103,10 +103,10 @@
     <Compile Include="class\account\Board.cs" />
     <Compile Include="class\workspace\Note.cs" />
     <Compile Include="class\workspace\CurrentBoard.cs" />
-    <Compile Include="BoardScr\CreateNote.cs">
+    <Compile Include="BoardScr\Tasks\CreateNote.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BoardScr\CreateNote.Designer.cs">
+    <Compile Include="BoardScr\Tasks\CreateNote.Designer.cs">
       <DependentUpon>CreateNote.cs</DependentUpon>
     </Compile>
     <Compile Include="BoardScr\Progress\ProgressTab.cs">
@@ -127,16 +127,16 @@
     <Compile Include="Access\EditProfile.Designer.cs">
       <DependentUpon>EditProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="BoardScr\G_RenameForm.cs">
+    <Compile Include="BoardScr\Tasks\G_RenameForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BoardScr\G_RenameForm.Designer.cs">
+    <Compile Include="BoardScr\Tasks\G_RenameForm.Designer.cs">
       <DependentUpon>G_RenameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BoardScr\G_AddTask.cs">
+    <Compile Include="BoardScr\Tasks\G_AddTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BoardScr\G_AddTask.Designer.cs">
+    <Compile Include="BoardScr\Tasks\G_AddTask.Designer.cs">
       <DependentUpon>G_AddTask.cs</DependentUpon>
     </Compile>
     <Compile Include="MainScr\Calendar\DetailsForm.cs">
@@ -281,10 +281,10 @@
     <Compile Include="MainScr\Workspace\WSTab.Designer.cs">
       <DependentUpon>WSTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="BoardScr\T_EditForm.cs">
+    <Compile Include="BoardScr\Tasks\T_EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BoardScr\T_EditForm.Designer.cs">
+    <Compile Include="BoardScr\Tasks\T_EditForm.Designer.cs">
       <DependentUpon>T_EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Access\UCVerify.cs">
@@ -305,19 +305,19 @@
     <EmbeddedResource Include="BoardScr\BoardPg.resx">
       <DependentUpon>BoardPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BoardScr\CreateNote.resx">
+    <EmbeddedResource Include="BoardScr\Tasks\CreateNote.resx">
       <DependentUpon>CreateNote.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BoardScr\CreateGroup.resx">
+    <EmbeddedResource Include="BoardScr\Tasks\CreateGroup.resx">
       <DependentUpon>CreateGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BoardScr\CreateTask.resx">
+    <EmbeddedResource Include="BoardScr\Tasks\CreateTask.resx">
       <DependentUpon>CreateTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BoardScr\Progress\ProgressTab.resx">
       <DependentUpon>ProgressTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BoardScr\T_EditForm.resx">
+    <EmbeddedResource Include="BoardScr\Tasks\T_EditForm.resx">
       <DependentUpon>T_EditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BoardScr\Tasks\TaskTab.resx">
@@ -326,7 +326,7 @@
     <EmbeddedResource Include="Access\EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BoardScr\G_AddTask.resx">
+    <EmbeddedResource Include="BoardScr\Tasks\G_AddTask.resx">
       <DependentUpon>G_AddTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScr\Calendar\DetailsForm.resx">

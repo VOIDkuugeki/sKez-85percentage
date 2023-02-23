@@ -65,5 +65,10 @@ namespace sKez
         {
             this.Dispose();
         }
+
+        private void settingNvgBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature is unavailable currently");
+        }
     }
 }

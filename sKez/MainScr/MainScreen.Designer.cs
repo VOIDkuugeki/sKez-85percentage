@@ -36,7 +36,6 @@ namespace sKez
             this.narBar = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.quickPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.silentNvgBtn = new System.Windows.Forms.Button();
             this.narbarIcon = new System.Windows.Forms.ImageList(this.components);
             this.settingNvgBtn = new System.Windows.Forms.Button();
             this.userPnl1 = new sKez.UserPanel();
@@ -46,7 +45,6 @@ namespace sKez
             this.controlIcon = new System.Windows.Forms.ImageList(this.components);
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
-            this.editIcon = new System.Windows.Forms.ImageList(this.components);
             this.Content = new System.Windows.Forms.Panel();
             this.narBar.SuspendLayout();
             this.quickPanel.SuspendLayout();
@@ -82,7 +80,6 @@ namespace sKez
             // 
             this.quickPanel.ColumnCount = 1;
             this.quickPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.quickPanel.Controls.Add(this.silentNvgBtn, 0, 1);
             this.quickPanel.Controls.Add(this.settingNvgBtn, 0, 2);
             this.quickPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.quickPanel.Location = new System.Drawing.Point(0, 648);
@@ -97,38 +94,12 @@ namespace sKez
             this.quickPanel.Size = this.quickPanel.MinimumSize;
             this.quickPanel.TabIndex = 5;
             // 
-            // silentNvgBtn
-            // 
-            this.silentNvgBtn.BackColor = System.Drawing.Color.BlueViolet;
-            this.silentNvgBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.silentNvgBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.silentNvgBtn.FlatAppearance.BorderSize = 0;
-            this.silentNvgBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.silentNvgBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkViolet;
-            this.silentNvgBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.silentNvgBtn.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.silentNvgBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.silentNvgBtn.ImageIndex = 0;
-            this.silentNvgBtn.ImageList = this.narbarIcon;
-            this.silentNvgBtn.Location = new System.Drawing.Point(0, 40);
-            this.silentNvgBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.silentNvgBtn.MaximumSize = new System.Drawing.Size(174, 59);
-            this.silentNvgBtn.MinimumSize = new System.Drawing.Size(40, 40);
-            this.silentNvgBtn.Name = "silentNvgBtn";
-            this.silentNvgBtn.Size = this.silentNvgBtn.MinimumSize;
-            this.silentNvgBtn.TabIndex = 4;
-            this.silentNvgBtn.Text = "Silent";
-            this.silentNvgBtn.UseCompatibleTextRendering = true;
-            this.silentNvgBtn.UseVisualStyleBackColor = false;
-            // 
             // narbarIcon
             // 
             this.narbarIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("narbarIcon.ImageStream")));
             this.narbarIcon.TransparentColor = System.Drawing.Color.Transparent;
-            this.narbarIcon.Images.SetKeyName(0, "bell-icon.png");
-            this.narbarIcon.Images.SetKeyName(1, "setting-icon.png");
-            this.narbarIcon.Images.SetKeyName(2, "calendarIcon.png");
-            this.narbarIcon.Images.SetKeyName(3, "user.png");
+            this.narbarIcon.Images.SetKeyName(0, "setting-icon.png");
+            this.narbarIcon.Images.SetKeyName(1, "user.png");
             // 
             // settingNvgBtn
             // 
@@ -141,7 +112,7 @@ namespace sKez
             this.settingNvgBtn.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingNvgBtn.ForeColor = System.Drawing.Color.Black;
             this.settingNvgBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingNvgBtn.ImageIndex = 1;
+            this.settingNvgBtn.ImageIndex = 0;
             this.settingNvgBtn.ImageList = this.narbarIcon;
             this.settingNvgBtn.Location = new System.Drawing.Point(0, 80);
             this.settingNvgBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -153,6 +124,7 @@ namespace sKez
             this.settingNvgBtn.Text = "Setting";
             this.settingNvgBtn.UseCompatibleTextRendering = true;
             this.settingNvgBtn.UseVisualStyleBackColor = false;
+            this.settingNvgBtn.Click += new System.EventHandler(this.settingNvgBtn_Click);
             // 
             // userPnl1
             // 
@@ -238,14 +210,6 @@ namespace sKez
             this.closeBtn.UseVisualStyleBackColor = false;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
-            // editIcon
-            // 
-            this.editIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("editIcon.ImageStream")));
-            this.editIcon.TransparentColor = System.Drawing.Color.Transparent;
-            this.editIcon.Images.SetKeyName(0, "pen-icon.png");
-            this.editIcon.Images.SetKeyName(1, "add-icon.png");
-            this.editIcon.Images.SetKeyName(2, "delete-icon.png");
-            // 
             // Content
             // 
             this.Content.AccessibleName = "Content";
@@ -288,13 +252,11 @@ namespace sKez
         private System.Windows.Forms.ImageList narbarIcon;
         private Panel panel6;
         private Button settingNvgBtn;
-        private Button silentNvgBtn;
         private Panel header;
         private Panel panel2;
         private Button minimizeBtn;
         private ImageList controlIcon;
         private Button closeBtn;
-        private ImageList editIcon;
         private TableLayoutPanel quickPanel;
 #pragma warning disable CS0436 // The type 'UserPanel' in 'D:\Uni\OOP\sKez project\sKez\sKez\UserPanel.cs' conflicts with the imported type 'UserPanel' in 'sKez, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. Using the type defined in 'D:\Uni\OOP\sKez project\sKez\sKez\UserPanel.cs'.
 #pragma warning restore CS0436 // The type 'UserPanel' in 'D:\Uni\OOP\sKez project\sKez\sKez\UserPanel.cs' conflicts with the imported type 'UserPanel' in 'sKez, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. Using the type defined in 'D:\Uni\OOP\sKez project\sKez\sKez\UserPanel.cs'.

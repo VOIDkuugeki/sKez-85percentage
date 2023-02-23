@@ -11,18 +11,18 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class CreateGroup : Form
+    public partial class G_AddTask : Form
     {
-        private int id;
+        private int g_id;
         private Control c;
-        public CreateGroup()
+        public G_AddTask()
         {
             InitializeComponent();
         }
-        public CreateGroup(int id, Control c)
+        public G_AddTask(int id, Control c)
         {
             InitializeComponent();
-            this.id = id;
+            this.g_id = id;
             this.c = c;
         }
 
@@ -63,12 +63,13 @@ namespace sKez
         {
             //Query
             SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
-            String query = "insert into TaskGroup (GroupName, LID)" +
-                "values (@name, @id)";
+            String query = "insert into Tasks (TaskName,UID, GID)" +
+                "values (@name, @uid, @gid)";
             cnt.Open();
             SqlCommand comm = new SqlCommand(query, cnt);
-            comm.Parameters.Add("@id", SqlDbType.Int).Value = this.id;
-            comm.Parameters.AddWithValue("@name", TxtBox.Text);
+            comm.Parameters.Add("@gid", SqlDbType.Int).Value = this.g_id;
+            comm.Parameters.Add("@uid", SqlDbType.Int).Value = User.Id;
+            comm.Parameters.AddWithValue("@name", textBox1.Text);
             comm.ExecuteNonQuery();
             cnt.Close();
             comm.Dispose();

@@ -14,6 +14,7 @@ namespace sKez
     public partial class GroupBx : UserControl
     {
         private int g_id;
+        private int l_id;
         private String name;
         private Control c;
 
@@ -21,10 +22,11 @@ namespace sKez
         {
             InitializeComponent();
         }
-        public GroupBx(int id, String name, Control c)
+        public GroupBx(int id, int lid, String name, Control c)
         {
             InitializeComponent();
             this.g_id = id;
+            this.l_id = lid;
             this.name = name;
             this.c = c; 
         }
@@ -63,7 +65,6 @@ namespace sKez
             dt.Dispose();
         }
 
-
         //Open UC in Control c
         private void openUControls(UserControl u)
         {
@@ -91,22 +92,43 @@ namespace sKez
             rf.ShowDialog();
         }
 
-        //Delete
+        //Delete group
+        private void DeleteGroup()
+        {
+            SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
+            String query = "delete from TaskGroup where GroupID = @id";
+            cnt.Open();
+            SqlCommand comm = new SqlCommand(query, cnt);
+            comm.Parameters.Add("@id", SqlDbType.Int).Value = this.g_id;
+            comm.ExecuteNonQuery();
+
+            comm.Dispose();
+            cnt.Close();
+        }
+
+        //Ungroup to tasks
+        private void Ungroup()
+        {
+            SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
+            String query = "update Tasks set GID = @null, LID = @lid where GID = @gid";
+            cnt.Open();
+            SqlCommand comm = new SqlCommand(query, cnt);
+            comm.Parameters.AddWithValue("@null", DBNull.Value);
+            comm.Parameters.Add("@lid", SqlDbType.Int).Value = this.l_id;
+            comm.Parameters.Add("@gid", SqlDbType.Int).Value = this.g_id;
+            comm.ExecuteNonQuery();
+            cnt.Close();
+            comm.Dispose();
+        }
+
+        //Delete click
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure to delete?", "Confirm", MessageBoxButtons.YesNo);
 
             if (dialogResult == DialogResult.Yes) //Yes
             {
-                SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
-                String query = "delete from TaskGroup where GroupID = @id";
-                cnt.Open();
-                SqlCommand comm = new SqlCommand(query, cnt);
-                comm.Parameters.Add("@id", SqlDbType.Int).Value = this.g_id;
-                comm.ExecuteNonQuery();
-
-                comm.Dispose();
-                cnt.Close();
+                DeleteGroup();
                 openUControls(new TaskTab());
             }
 
@@ -117,6 +139,19 @@ namespace sKez
         {
             G_AddTask af = new G_AddTask(g_id, c);
             af.ShowDialog();
+        }
+
+        //Ungroup click
+        private void convertToTasksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure to ungroup?", "Confirm", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Ungroup();
+                DeleteGroup();
+                openUControls(new TaskTab());
+            }
         }
     }
 }

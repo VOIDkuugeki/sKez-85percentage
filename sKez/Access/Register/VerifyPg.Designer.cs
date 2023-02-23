@@ -101,7 +101,7 @@
             this.confirmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.confirmBtn.FlatAppearance.BorderSize = 0;
-            this.confirmBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.confirmBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet;
             this.confirmBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
             this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmBtn.Font = new System.Drawing.Font("Meiryo UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

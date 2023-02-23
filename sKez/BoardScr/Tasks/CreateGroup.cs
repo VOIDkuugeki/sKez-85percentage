@@ -11,18 +11,18 @@ using System.Windows.Forms;
 
 namespace sKez
 {
-    public partial class G_AddTask : Form
+    public partial class CreateGroup : Form
     {
-        private int g_id;
+        private int id;
         private Control c;
-        public G_AddTask()
+        public CreateGroup()
         {
             InitializeComponent();
         }
-        public G_AddTask(int id, Control c)
+        public CreateGroup(int id, Control c)
         {
             InitializeComponent();
-            this.g_id = id;
+            this.id = id;
             this.c = c;
         }
 
@@ -58,18 +58,17 @@ namespace sKez
             u.BringToFront();
         }
 
-        //Create new note
+        //Create new group
         private void CreateBtn_Click(object sender, EventArgs e)
         {
             //Query
             SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
-            String query = "insert into Tasks (TaskName,UID, GID)" +
-                "values (@name, @gid)";
+            String query = "insert into TaskGroup (GroupName, LID)" +
+                "values (@name, @id)";
             cnt.Open();
             SqlCommand comm = new SqlCommand(query, cnt);
-            comm.Parameters.Add("@gid", SqlDbType.Int).Value = this.g_id;
-            comm.Parameters.Add("@uid", SqlDbType.Int).Value = User.Id;
-            comm.Parameters.AddWithValue("@name", textBox1.Text);
+            comm.Parameters.Add("@id", SqlDbType.Int).Value = this.id;
+            comm.Parameters.AddWithValue("@name", TxtBox.Text);
             comm.ExecuteNonQuery();
             cnt.Close();
             comm.Dispose();

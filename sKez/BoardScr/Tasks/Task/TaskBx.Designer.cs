@@ -98,6 +98,7 @@
             this.convertMB.Name = "convertMB";
             this.convertMB.Size = new System.Drawing.Size(185, 28);
             this.convertMB.Text = "Convert to Group";
+            this.convertMB.Click += new System.EventHandler(this.convertMB_Click);
             // 
             // delMB
             // 

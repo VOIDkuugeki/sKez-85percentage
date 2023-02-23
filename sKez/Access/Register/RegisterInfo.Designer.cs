@@ -93,7 +93,9 @@
             this.confirmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.confirmBtn.FlatAppearance.BorderSize = 0;
-            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.confirmBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet;
+            this.confirmBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
+            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmBtn.Font = new System.Drawing.Font("Meiryo UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.confirmBtn.ImageIndex = 0;
@@ -162,13 +164,13 @@
             this.confirmPnl.Size = new System.Drawing.Size(180, 85);
             this.confirmPnl.TabIndex = 5;
             // 
-            // registerInfo
+            // RegisterInfo
             // 
             this.AccessibleDescription = "registerInfo";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "registerInfo";
+            this.Name = "RegisterInfo";
             this.Size = new System.Drawing.Size(700, 600);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.header.ResumeLayout(false);

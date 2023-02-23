@@ -65,7 +65,7 @@ namespace sKez
                     {
                         int t_id = Convert.ToInt32(row["TaskId"]);
                         String t_name = row["TaskName"].ToString();
-                        TaskBx tmp = new TaskBx(t_id, t_name, this.Parent.Parent.Parent);
+                        TaskBx tmp = new TaskBx(t_id, this.id, t_name, this.Parent.Parent.Parent);
                         this.NContent.Controls.Add(tmp);
                     }
                 }
@@ -99,7 +99,7 @@ namespace sKez
                     {
                         int g_id = Convert.ToInt32(row["GroupId"]);
                         String g_name = row["GroupName"].ToString();
-                        GroupBx tmp = new GroupBx(g_id, g_name, this.Parent.Parent.Parent);
+                        GroupBx tmp = new GroupBx(g_id,this.id, g_name, this.Parent.Parent.Parent);
                         this.NContent.Controls.Add(tmp);
                     }
                 }

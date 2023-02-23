@@ -112,7 +112,8 @@
             this.convertToTasksToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 144);
+            this.contextMenuStrip1.ShowImageMargin = false;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(186, 144);
             // 
             // addTaskToolStripMenuItem
             // 
@@ -133,8 +134,9 @@
             // 
             this.convertToTasksToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.convertToTasksToolStripMenuItem.Name = "convertToTasksToolStripMenuItem";
-            this.convertToTasksToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
+            this.convertToTasksToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.convertToTasksToolStripMenuItem.Text = "Ungroup";
+            this.convertToTasksToolStripMenuItem.Click += new System.EventHandler(this.convertToTasksToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 

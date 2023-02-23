@@ -58,7 +58,7 @@ namespace sKez
             u.BringToFront();
         }
 
-        //Create new note
+        //Create new task
         private void CreateBtn_Click(object sender, EventArgs e)
         {
             //Query
