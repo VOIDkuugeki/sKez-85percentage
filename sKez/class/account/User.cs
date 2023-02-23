@@ -24,26 +24,27 @@ namespace sKez
             id = 0;
             bLst = new List<Board>();
         }
+        //Id
         public static int Id
         {
             get { return id; }
             set { id = value; }
         }
+        //Name
         public static String Uname
         {
             get { return username; }
             set { username = value; }
         }
+        //Password
         public static String Pwd
         {
             get { return password; }
             set { password = value; }
         }
-        public static List<Board> BLst
-        {
-            get { return bLst; }
-        }
-        public static void setMail()
+
+        //Set mail from DB
+        public static void SetMail()
         {
             SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
             String query = "select * from User_info where Id = @id";
@@ -58,13 +59,21 @@ namespace sKez
             mail = row["Mail"].ToString();
             cnt.Close();
         }
-        public static String getMail()
+
+        //Get mail
+        public static String GetMail()
         {
             return mail;
         }
 
-        //Get Boards of User
-        public static void setBLst()
+        //Get board list
+        public static List<Board> BLst
+        {
+            get { return bLst; }
+        }
+
+        //Set Boards List
+        public static void SetBLst()
         {
             SqlConnection cnt = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Uni\OOP\sKez project\sKez\sKez\Database.mdf"";Integrated Security=True");
             String query = "select * from Board where UID = @id";
@@ -77,15 +86,14 @@ namespace sKez
             comm.ExecuteNonQuery();
 
             //Check DT null or not
-            if(dt != null)
+            if (dt != null)
             {
-                if(dt.Rows.Count > 0)
+                if (dt.Rows.Count > 0)
                 {
-                    List<Control> ctrls = new List<Control>(bLst.Count);
+                    //Clear boards in list
                     bLst.Clear();
-                    foreach (Control c in ctrls)
-                        c.Dispose();
 
+                    //Adapt controls
                     foreach (DataRow row in dt.Rows)
                     {
                         int id = Convert.ToInt32(row["BoardId"]);
@@ -96,6 +104,9 @@ namespace sKez
                 }
             }
             cnt.Close();
+            comm.Dispose();
+            sda.Dispose();
+            dt.Dispose();
         }
     }
 }

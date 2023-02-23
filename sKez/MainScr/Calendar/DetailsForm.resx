@@ -117,26 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="setting-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\setting-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bookmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bookmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Your paragraph text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bell-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bell-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CIS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CIS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACS
+        AgAAAk1TRnQBSQFMAwEBAAEIAQABCAEAARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMA
+        ARgDAAEBAQABIAYAAST/AP8A/wD/AP8A/wD/AP8A/wA6AAH/AwAB/wMBAf4XAAH/AwAB/wMAAf//AFgA
+        Af8DAAH/AwAB/wMRAfcPAAH/AwAB/wMAAf8DAAH//wBYAAH/AwAB/wMAAf8DAAH/AxcB6QQAAwsB/gMA
+        Af8DAAH/AwAB/wMAAf//AFwAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB//8AZAAB/wMA
+        Af8DAAH/AwAB/wMAAf8DAAH/AwsB//8AaQADBAH/AwAB/wMAAf8DAAH/AwAB//8AbAAB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwsB9P8AZAAB/wMAAf8DAAH/AwAB/wMGAf8DAAH/AwAB/wMAAf8DDQH0/wBcAAH/
+        AwAB/wMAAf8DAAH/AwAB/wcAAf8DAAH/AwAB/wMAAf8DAgH9/wBYAAH/AwAB/wMAAf8DAAH/DwAB/wMA
+        Af8DAAH/AwAB//8AWAAB/wMAAf8DAAH/FwAB/wMAAf8DAAH//wD/AP8A/wD/AP8A/wD/AP8A/wD/AMMA
+        AUIBTQE+BwABPgMAASgDAAFgAwABGAMAAQEBAAEBBQABIAEBFgAD/wEAA/8JAAP/CQAD/wkAA/8JAAP/
+        CQAD/wkAAf4BPgE/CQAB/gEcAT8JAAH+AQgBPwkAAf8BAAF/CQAB/wGAAf8JAAH/AcEB/wkAAf8BgAH/
+        CQAB/wEAAX8JAAH+AQgBPwkAAf4BHAE/CQAB/gE+AT8JAAP/CQAD/wkAA/8JAAP/CQAD/wkAA/8JAAP/
+        CQAL
+</value>
   </data>
 </root>

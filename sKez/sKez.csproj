@@ -48,10 +48,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="sKez">
+      <HintPath>obj\Debug\sKez.exe</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,68 +67,132 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UCBoard.cs">
+    <Compile Include="BoardScr\BoardPg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCBoard.Designer.cs">
+    <Compile Include="BoardScr\BoardPg.Designer.cs">
+      <DependentUpon>BoardPg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardScr\CreateGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardScr\CreateGroup.Designer.cs">
+      <DependentUpon>CreateGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardScr\CreateTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardScr\CreateTask.Designer.cs">
+      <DependentUpon>CreateTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Access\ChangeMail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Access\ChangeMail.Designer.cs">
+      <DependentUpon>ChangeMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Access\ChangePwd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Access\ChangePwd.Designer.cs">
+      <DependentUpon>ChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class\account\Board.cs" />
+    <Compile Include="class\workspace\Note.cs" />
+    <Compile Include="class\workspace\CurrentBoard.cs" />
+    <Compile Include="BoardScr\CreateNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardScr\CreateNote.Designer.cs">
+      <DependentUpon>CreateNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardScr\Progress\ProgressTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoardScr\Progress\ProgressTab.Designer.cs">
+      <DependentUpon>ProgressTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardScr\Tasks\TaskTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoardScr\Tasks\TaskTab.Designer.cs">
+      <DependentUpon>TaskTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Access\EditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Access\EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardScr\G_RenameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardScr\G_RenameForm.Designer.cs">
+      <DependentUpon>G_RenameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardScr\G_AddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardScr\G_AddTask.Designer.cs">
+      <DependentUpon>G_AddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScr\Calendar\DetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScr\Calendar\DetailsForm.Designer.cs">
+      <DependentUpon>DetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScr\Calendar\UCDetailsTask.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainScr\Calendar\UCDetailsTask.Designer.cs">
+      <DependentUpon>UCDetailsTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScr\Workspace\UCBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainScr\Workspace\UCBoard.Designer.cs">
       <DependentUpon>UCBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="BoardScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BoardScreen.Designer.cs">
-      <DependentUpon>BoardScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CalendarTab.cs">
+    <Compile Include="MainScr\Calendar\CalendarTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CalendarTab.Designer.cs">
+    <Compile Include="MainScr\Calendar\CalendarTab.Designer.cs">
       <DependentUpon>CalendarTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="class\workspace\Board.cs" />
-    <Compile Include="class\workspace\GroupTask.cs" />
-    <Compile Include="class\workspace\ITask.cs" />
     <Compile Include="class\account\Profile.cs" />
-    <Compile Include="class\workspace\stickPaper.cs" />
-    <Compile Include="class\workspace\Task.cs" />
     <Compile Include="class\account\User.cs" />
-    <Compile Include="class\workspace\Workspace.cs" />
-    <Compile Include="CreateBoard.cs">
+    <Compile Include="MainScr\Workspace\CreateBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateBoard.Designer.cs">
+    <Compile Include="MainScr\Workspace\CreateBoard.Designer.cs">
       <DependentUpon>CreateBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="DayCalendar.cs">
+    <Compile Include="BoardScr\Tasks\TaskGrp\GroupBx.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DayCalendar.Designer.cs">
-      <DependentUpon>DayCalendar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GroupBx.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GroupBx.Designer.cs">
+    <Compile Include="BoardScr\Tasks\TaskGrp\GroupBx.Designer.cs">
       <DependentUpon>GroupBx.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPg.cs">
+    <Compile Include="MainScr\MainPg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainPg.Designer.cs">
+    <Compile Include="MainScr\MainPg.Designer.cs">
       <DependentUpon>MainPg.cs</DependentUpon>
     </Compile>
-    <Compile Include="MonthCalendar.cs">
+    <Compile Include="MainScr\Calendar\MonthCal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MonthCalendar.Designer.cs">
-      <DependentUpon>MonthCalendar.cs</DependentUpon>
+    <Compile Include="MainScr\Calendar\MonthCal.Designer.cs">
+      <DependentUpon>MonthCal.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProfilePg.cs">
+    <Compile Include="Access\ProfilePg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProfilePg.Designer.cs">
+    <Compile Include="Access\ProfilePg.Designer.cs">
       <DependentUpon>ProfilePg.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -130,191 +200,206 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UCBlank.cs">
+    <Compile Include="MainScr\Calendar\UCBlank.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCBlank.Designer.cs">
+    <Compile Include="MainScr\Calendar\UCBlank.Designer.cs">
       <DependentUpon>UCBlank.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCDays_month.cs">
+    <Compile Include="MainScr\Calendar\UCDays_month.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCDays_month.Designer.cs">
+    <Compile Include="MainScr\Calendar\UCDays_month.Designer.cs">
       <DependentUpon>UCDays_month.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCDays_week.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCDays_week.Designer.cs">
-      <DependentUpon>UCDays_week.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RenameForm.cs">
+    <Compile Include="MainScr\Workspace\RenameForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RenameForm.Designer.cs">
+    <Compile Include="MainScr\Workspace\RenameForm.Designer.cs">
       <DependentUpon>RenameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserPnl.cs">
+    <Compile Include="MainScr\UserPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserPnl.Designer.cs">
-      <DependentUpon>UserPnl.cs</DependentUpon>
+    <Compile Include="MainScr\UserPanel.Designer.cs">
+      <DependentUpon>UserPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPg.cs">
+    <Compile Include="Access\Login\LoginPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginPg.Designer.cs">
-      <DependentUpon>LoginPg.cs</DependentUpon>
+    <Compile Include="Access\Login\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewGrp.cs">
+    <Compile Include="BoardScr\Tasks\UCNote.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NewGrp.Designer.cs">
-      <DependentUpon>NewGrp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NewTsk.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="NewTsk.Designer.cs">
-      <DependentUpon>NewTsk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Note.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Note.Designer.cs">
-      <DependentUpon>Note.cs</DependentUpon>
+    <Compile Include="BoardScr\Tasks\UCNote.Designer.cs">
+      <DependentUpon>UCNote.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterInfo.cs">
+    <Compile Include="Access\Register\RegisterInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RegisterInfo.Designer.cs">
+    <Compile Include="Access\Register\RegisterInfo.Designer.cs">
       <DependentUpon>RegisterInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignupPg.cs">
+    <Compile Include="Access\Register\SignupPg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SignupPg.Designer.cs">
+    <Compile Include="Access\Register\SignupPg.Designer.cs">
       <DependentUpon>SignupPg.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaskBx.cs">
+    <Compile Include="BoardScr\Tasks\Task\TaskBx.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TaskBx.Designer.cs">
+    <Compile Include="BoardScr\Tasks\Task\TaskBx.Designer.cs">
       <DependentUpon>TaskBx.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserAccess.cs">
+    <Compile Include="Access\UserAccess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccess.Designer.cs">
+    <Compile Include="Access\UserAccess.Designer.cs">
       <DependentUpon>UserAccess.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerifyPg.cs">
+    <Compile Include="Access\Register\VerifyPg.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VerifyPg.Designer.cs">
+    <Compile Include="Access\Register\VerifyPg.Designer.cs">
       <DependentUpon>VerifyPg.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainScreen.cs">
+    <Compile Include="MainScr\MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainScreen.Designer.cs">
+    <Compile Include="MainScr\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="WeekCalendar.cs">
+    <Compile Include="MainScr\Workspace\WSTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="WeekCalendar.Designer.cs">
-      <DependentUpon>WeekCalendar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WSTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="WSTab.Designer.cs">
+    <Compile Include="MainScr\Workspace\WSTab.Designer.cs">
       <DependentUpon>WSTab.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UCBoard.resx">
+    <Compile Include="BoardScr\T_EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardScr\T_EditForm.Designer.cs">
+      <DependentUpon>T_EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Access\UCVerify.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Access\UCVerify.Designer.cs">
+      <DependentUpon>UCVerify.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Access\ChangeMail.resx">
+      <DependentUpon>ChangeMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Access\ChangePwd.resx">
+      <DependentUpon>ChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Access\UCVerify.resx">
+      <DependentUpon>UCVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardScr\BoardPg.resx">
+      <DependentUpon>BoardPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardScr\CreateNote.resx">
+      <DependentUpon>CreateNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardScr\CreateGroup.resx">
+      <DependentUpon>CreateGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardScr\CreateTask.resx">
+      <DependentUpon>CreateTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardScr\Progress\ProgressTab.resx">
+      <DependentUpon>ProgressTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardScr\T_EditForm.resx">
+      <DependentUpon>T_EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardScr\Tasks\TaskTab.resx">
+      <DependentUpon>TaskTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Access\EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardScr\G_AddTask.resx">
+      <DependentUpon>G_AddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScr\Calendar\DetailsForm.resx">
+      <DependentUpon>DetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScr\Workspace\UCBoard.resx">
       <DependentUpon>UCBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BoardScreen.resx">
-      <DependentUpon>BoardScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CalendarTab.resx">
+    <EmbeddedResource Include="MainScr\Calendar\CalendarTab.resx">
       <DependentUpon>CalendarTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateBoard.resx">
+    <EmbeddedResource Include="MainScr\Workspace\CreateBoard.resx">
       <DependentUpon>CreateBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GroupBx.resx">
+    <EmbeddedResource Include="BoardScr\Tasks\TaskGrp\GroupBx.resx">
       <DependentUpon>GroupBx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPg.resx">
+    <EmbeddedResource Include="MainScr\MainPg.resx">
       <DependentUpon>MainPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MonthCalendar.resx">
-      <DependentUpon>MonthCalendar.cs</DependentUpon>
+    <EmbeddedResource Include="MainScr\Calendar\MonthCal.resx">
+      <DependentUpon>MonthCal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProfilePg.resx">
+    <EmbeddedResource Include="Access\ProfilePg.resx">
       <DependentUpon>ProfilePg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCBlank.resx">
+    <EmbeddedResource Include="MainScr\Calendar\UCBlank.resx">
       <DependentUpon>UCBlank.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCDays_month.resx">
+    <EmbeddedResource Include="MainScr\Calendar\UCDays_month.resx">
       <DependentUpon>UCDays_month.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCDays_week.resx">
-      <DependentUpon>UCDays_week.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RenameForm.resx">
+    <EmbeddedResource Include="MainScr\Workspace\RenameForm.resx">
       <DependentUpon>RenameForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserPnl.resx">
-      <DependentUpon>UserPnl.cs</DependentUpon>
+    <EmbeddedResource Include="MainScr\UserPanel.resx">
+      <DependentUpon>UserPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPg.resx">
-      <DependentUpon>LoginPg.cs</DependentUpon>
+    <EmbeddedResource Include="Access\Login\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewGrp.resx">
-      <DependentUpon>NewGrp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewTsk.resx">
-      <DependentUpon>NewTsk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Note.resx">
-      <DependentUpon>Note.cs</DependentUpon>
+    <EmbeddedResource Include="BoardScr\Tasks\UCNote.resx">
+      <DependentUpon>UCNote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\sKez.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterInfo.resx">
+    <EmbeddedResource Include="Access\Register\RegisterInfo.resx">
       <DependentUpon>RegisterInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignupPg.resx">
+    <EmbeddedResource Include="Access\Register\SignupPg.resx">
       <DependentUpon>SignupPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaskBx.resx">
+    <EmbeddedResource Include="BoardScr\Tasks\Task\TaskBx.resx">
       <DependentUpon>TaskBx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAccess.resx">
+    <EmbeddedResource Include="Access\UserAccess.resx">
       <DependentUpon>UserAccess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VerifyPg.resx">
+    <EmbeddedResource Include="Access\Register\VerifyPg.resx">
       <DependentUpon>VerifyPg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainScreen.resx">
+    <EmbeddedResource Include="MainScr\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WeekCalendar.resx">
-      <DependentUpon>WeekCalendar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WSTab.resx">
+    <EmbeddedResource Include="MainScr\Workspace\WSTab.resx">
       <DependentUpon>WSTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScr\Calendar\UCDetailsTask.resx">
+      <DependentUpon>UCDetailsTask.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -347,7 +432,6 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
-    <Folder Include="class\extra\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
@@ -359,9 +443,10 @@
     </Content>
     <Content Include="obj\Debug\sKez.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
-    <Content Include="Resources\bitmap2.png" />
-    <None Include="Resources\bitmap21.png" />
-    <None Include="Resources\bitmap1.png" />
+    <None Include="Resources\Your paragraph text.png" />
+    <None Include="Resources\bookmark.png" />
+    <None Include="Resources\CIS.jpg" />
+    <Content Include="Resources\note.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
